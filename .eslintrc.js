@@ -1,7 +1,8 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
+    jest: true
   },
   extends: [
     'plugin:react/recommended',
@@ -33,7 +34,7 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": "warn",
     "@typescript-eslint/naming-convention": "off",
     "i18next/no-literal-string": ["error", {markupOnly: true}],
-    "max-len": [2, 120, 2, { ignoreUrls: true }],
+    "max-len": [2, 120, 2, { ignoreUrls: true, ignoreComments: true, ignoreRegExpLiterals: true  }],
   },
   ignorePatterns: ['.eslintrc.js']
 }
