@@ -1,3 +1,3 @@
-import { lazy } from "react";
+import { lazy } from 'react'
 
-export const MainPageLazy = lazy(() => import('./main-page').then(module=>({default:module.MainPage})));
+export const MainPageLazy = lazy(async () => await import('./main-page').then(module => ({ default: module.MainPage })))

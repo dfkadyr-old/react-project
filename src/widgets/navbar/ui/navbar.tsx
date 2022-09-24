@@ -1,13 +1,14 @@
-import { classNames } from "shared/lib/class-names";
-import { Index, AppLinkTheme } from "shared/ui/app-link";
+import { classNames } from 'shared/lib/class-names'
+import { Index, AppLinkTheme } from 'shared/ui/app-link'
 
-import cls from './navbar.module.scss';
+import cls from './navbar.module.scss'
 
 interface NavbarProps {
-  className?: string;
+  className?: string
 }
 
-export const Navbar = ({className}: NavbarProps) => {
+export const Navbar = (props: NavbarProps): JSX.Element => {
+  const { className } = props
   return (
     <div className={classNames(cls.navbar, {}, [className])}>
       <div className={cls.links}>
@@ -15,5 +16,5 @@ export const Navbar = ({className}: NavbarProps) => {
         <Index to={'/about'} theme={AppLinkTheme.SECONDARY}>About</Index>
       </div>
     </div>
-  );
-};
+  )
+}
