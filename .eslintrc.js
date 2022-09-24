@@ -6,7 +6,8 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
-    'standard-with-typescript'
+    'standard-with-typescript',
+    'plugin:i18next/recommended'
   ],
   overrides: [
   ],
@@ -18,7 +19,7 @@ module.exports = {
   },
   plugins: [
     'react',
-
+    'i18next'
   ],
   rules: {
     "@typescript-eslint/space-before-function-paren": "off",
@@ -30,6 +31,9 @@ module.exports = {
     "@typescript-eslint/no-floating-promises": "warn",
     "@typescript-eslint/strict-boolean-expressions": "off",
     "@typescript-eslint/explicit-function-return-type": "warn",
-    "@typescript-eslint/naming-convention": "off"
-  }
+    "@typescript-eslint/naming-convention": "off",
+    "i18next/no-literal-string": ["error", {markupOnly: true}],
+    "max-len": [2, 120, 2, { ignoreUrls: true }],
+  },
+  ignorePatterns: ['.eslintrc.js']
 }
