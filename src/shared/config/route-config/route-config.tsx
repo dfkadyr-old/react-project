@@ -3,7 +3,7 @@ import { MainPage } from 'pages/main-page'
 import { AboutPage } from 'pages/about-page'
 import { NotFoundPage } from 'pages/not-found-page'
 
-export const enum AppRoutes {
+const enum AppRoutes {
   MAIN = 'main',
   ABOUT = 'about',
   NOT_FOUND = 'not_found'

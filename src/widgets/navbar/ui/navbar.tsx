@@ -1,7 +1,9 @@
 import { classNames } from 'shared/lib/class-names'
-import { Index, AppLinkTheme } from 'shared/ui/app-link'
+import { AppLink, AppLinkTheme } from 'shared/ui/app-link'
 
 import cls from './navbar.module.scss'
+import { RoutePath } from 'shared/config/route-config'
+import { useTranslation } from 'react-i18next'
 
 interface NavbarProps {
   className?: string
@@ -9,11 +11,16 @@ interface NavbarProps {
 
 export const Navbar = (props: NavbarProps): JSX.Element => {
   const { className } = props
+  const { t } = useTranslation()
   return (
     <div className={classNames(cls.navbar, {}, [className])}>
       <div className={cls.links}>
-        <Index to={'/'} theme={AppLinkTheme.SECONDARY} className={cls.mainLink}>Home</Index>
-        <Index to={'/about'} theme={AppLinkTheme.SECONDARY}>About</Index>
+        <AppLink to={RoutePath.main} theme={AppLinkTheme.SECONDARY} className={cls.mainLink}>
+          {t('Home')}
+        </AppLink>
+        <AppLink to={RoutePath.about} theme={AppLinkTheme.SECONDARY}>
+          {t('About')}
+        </AppLink>
       </div>
     </div>
   )
