@@ -2,5 +2,7 @@
   "LANGUAGE_TITLE": "Русский",
   "NOT_FOUND_PAGE_TITLE": "Страница не найдена!",
   "Home": "Главная",
-  "About": "О нас"
+  "About": "О нас",
+  "Something went wrong": "Something went wrong",
+  "Refresh page": "Refresh page"
 }
