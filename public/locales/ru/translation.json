@@ -1,9 +1,8 @@
 {
-  "LANGUAGE_TITLE": "Русский",
-  "NOT_FOUND_PAGE_TITLE": "Страница не найдена!",
   "Home": "Главная",
   "About": "О нас",
-  "Something went wrong": "Something went wrong",
-  "Refresh page": "Refresh page",
-  "toggle": "toggle"
+  "Something went wrong": "Что то пошло не так",
+  "Refresh page": "Обновите страницу",
+  "Language": "Язык",
+  "Not found page": "Страница не найдена"
 }

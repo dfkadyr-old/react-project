@@ -7,7 +7,7 @@ export const MainPage = (): JSX.Element => {
   return (
     <div>
       <BugButton />
-      {t('MAIN_PAGE_TITLE')}
+      {t('Main page')}
     </div>
   )
 }

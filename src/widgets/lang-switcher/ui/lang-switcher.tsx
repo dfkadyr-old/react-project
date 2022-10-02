@@ -21,7 +21,7 @@ export const LangSwitcher = (props: LangSwitcherProps): JSX.Element => {
       theme={ThemeButton.CLEAR}
       onClick={toggle}
     >
-      {t('LANGUAGE_TITLE')}
+      {t('Language')}
     </Button>
   )
 }

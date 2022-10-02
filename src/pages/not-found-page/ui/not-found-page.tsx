@@ -8,7 +8,7 @@ export const NotFoundPage = (): JSX.Element => {
 
   return (
     <div className={classNames(cls.NotFoundPage, {}, [])}>
-      {t('NOT_FOUND_PAGE_TITLE')}
+      {t('Not found page')}
     </div>
   )
 }

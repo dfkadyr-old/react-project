@@ -5,7 +5,7 @@ export const AboutPage = (): JSX.Element => {
 
   return (
     <div>
-      {t('ABOUT_PAGE_TITLE')}
+      {t('About page')}
     </div>
   )
 }
