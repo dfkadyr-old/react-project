@@ -8,7 +8,10 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:react/jsx-runtime',
     'standard-with-typescript',
-    'plugin:i18next/recommended'
+    'plugin:i18next/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -16,9 +19,18 @@ module.exports = {
     sourceType: 'module',
     project: ['./tsconfig.json']
   },
+  settings: {
+    'import/resolver': {
+      node: {
+        paths: ['src'],
+        modulesDirectories: ['node_modules']
+      }
+    }
+  },
   plugins: [
     'react',
-    'i18next'
+    'i18next',
+    'import'
   ],
   rules: {
     '@typescript-eslint/space-before-function-paren': 'off',
@@ -40,13 +52,31 @@ module.exports = {
     ],
     'max-len': [2, 120, 2, { ignoreUrls: true, ignoreComments: true, ignoreRegExpLiterals: true }],
     '@typescript-eslint/consistent-type-assertions': ['warn'],
-    'react/display-name': 'off'
+    'react/display-name': 'off',
+    'no-console': ['warn', { allow: ['info', 'error'] }],
+    'import/order': [
+      'error',
+      {
+        alphabetize: {
+          order: 'asc'
+        },
+        'newlines-between': 'always',
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']
+      }
+    ]
   },
   overrides: [
     {
       files: ['**/src/**/*.test.{ts,tsx}'],
       rules: {
         'i18next/no-literal-string': 'off'
+      }
+    },
+    {
+      files: ['**/src/**/*.stories.{ts,tsx}'],
+      rules: {
+        'react/jsx-props-no-spreading': 'off',
+        '@typescript-eslint/consistent-type-assertions': 'off'
       }
     }
   ]
