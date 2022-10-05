@@ -15,6 +15,10 @@ export function buildPlugins(props: BuildOptions): webpack.WebpackPluginInstance
     new webpack.ProgressPlugin(),
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev)
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].[contenthash:8].css',
+      chunkFilename: 'css/[name].[contenthash:8].css'
     })
   ]
 
@@ -22,10 +26,6 @@ export function buildPlugins(props: BuildOptions): webpack.WebpackPluginInstance
     plugins.push(new webpack.HotModuleReplacementPlugin())
     plugins.push(new BundleAnalyzerPlugin({
       openAnalyzer: false
-    }))
-    plugins.push(new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash:8].css',
-      chunkFilename: 'css/[name].[contenthash:8].css'
     }))
   }
 
