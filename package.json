@@ -102,9 +102,6 @@
         "target": "chrome.docker",
         "preset": "iPhone 7"
       }
-    },
-    "looks-same": {
-      "ignoreCaret": true
     }
   }
 }
