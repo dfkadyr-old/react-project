@@ -98,6 +98,9 @@
         "target": "chrome.app",
         "preset": "iPhone 7"
       }
+    },
+    "looks-same": {
+      "ignoreCaret": true
     }
   }
 }
