@@ -30,6 +30,12 @@ Secondary.args = {
   theme: AppLinkTheme.SECONDARY
 }
 
+export const Red = Template.bind({})
+Red.args = {
+  children: 'Text',
+  theme: AppLinkTheme.RED
+}
+
 export const PrimaryDark = Template.bind({})
 PrimaryDark.args = {
   children: 'text',
