@@ -1,5 +1,5 @@
-import { t } from 'i18next'
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import AboutIcon from 'shared/assets/icons/about-20-20.svg'
 import MainIcon from 'shared/assets/icons/main-20-20.svg'
@@ -20,6 +20,7 @@ interface SidebarProps {
 export const Sidebar = (props: SidebarProps): JSX.Element => {
   const { className } = props
   const [collapsed, setCollapsed] = useState(false)
+  const { t } = useTranslation()
 
   const onToggle = () => setCollapsed(prev => !prev)
 
