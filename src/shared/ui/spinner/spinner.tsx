@@ -6,7 +6,8 @@ interface spinnerProps {
   className?: string
 }
 
-export const Spinner = ({ className }: spinnerProps) => {
+export const Spinner = (props: spinnerProps) => {
+  const { className } = props
   return (
     <div className={classNames(cls.spinner, {}, [className])}>
       <div></div>
