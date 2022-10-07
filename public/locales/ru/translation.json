@@ -5,5 +5,19 @@
   "Refresh page": "Обновите страницу",
   "Not found page": "Страница не найдена",
   "En": "Ru",
-  "English": "Русский"
+  "English": "Русский",
+  "Entry": "Entry",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
+    " Cupiditate, dicta dolorem ex exercitationem facere fugiat impedit neque nobis repellat totam": {
+      " At eos illo ipsa libero necessitatibus nulla numquam ut": {
+        " Accusantium?": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, dicta dolorem ex exercitationem facere fugiat impedit neque nobis repellat totam. At eos illo ipsa libero necessitatibus nulla numquam ut. Accusantium?"
+      }
+    }
+  },
+  "At eos illo ipsa libero necessitatibus nulla numquam ut": {
+    " Accusantium?": "At eos illo ipsa libero necessitatibus nulla numquam ut. Accusantium?"
+  },
+  "Cupiditate, dicta dolorem ex exercitationem facere fugiat impedit neque nobis repellat totam": {
+    " ": "Cupiditate, dicta dolorem ex exercitationem facere fugiat impedit neque nobis repellat totam. "
+  }
 }

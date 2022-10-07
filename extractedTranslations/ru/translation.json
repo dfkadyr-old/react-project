@@ -2,9 +2,17 @@
   "ABOUT_PAGE_TITLE": "ABOUT_PAGE_TITLE",
   "About": "About",
   "About page": "About page",
+  "Entry": "Entry",
   "Home": "Home",
   "LANGUAGE_TITLE": "LANGUAGE_TITLE",
   "Language": "Language",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
+    " Cupiditate, dicta dolorem ex exercitationem facere fugiat impedit neque nobis repellat totam": {
+      " At eos illo ipsa libero necessitatibus nulla numquam ut": {
+        " Accusantium?": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, dicta dolorem ex exercitationem facere fugiat impedit neque nobis repellat totam. At eos illo ipsa libero necessitatibus nulla numquam ut. Accusantium?"
+      }
+    }
+  },
   "MAIN_PAGE_TITLE": "MAIN_PAGE_TITLE",
   "MAIN_PAGE_TITLE321312": "MAIN_PAGE_TITLE321312",
   "Main page": "Main page",

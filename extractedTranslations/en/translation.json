@@ -2,8 +2,16 @@
   "": "",
   "About": "About",
   "About page": "About page",
+  "Entry": "Entry",
   "Home": "Home",
   "Language": "Language",
+  "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
+    " Cupiditate, dicta dolorem ex exercitationem facere fugiat impedit neque nobis repellat totam": {
+      " At eos illo ipsa libero necessitatibus nulla numquam ut": {
+        " Accusantium?": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, dicta dolorem ex exercitationem facere fugiat impedit neque nobis repellat totam. At eos illo ipsa libero necessitatibus nulla numquam ut. Accusantium?"
+      }
+    }
+  },
   "Main page": "Main page",
   "Not found page": "Not found page",
   "Refresh page": "Refresh page",

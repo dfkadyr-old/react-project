@@ -30,7 +30,8 @@ module.exports = {
   plugins: [
     'react',
     'i18next',
-    'import'
+    'import',
+    'react-hooks'
   ],
   rules: {
     '@typescript-eslint/space-before-function-paren': 'off',
@@ -63,13 +64,16 @@ module.exports = {
         'newlines-between': 'always',
         groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']
       }
-    ]
+    ],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'error'
   },
   overrides: [
     {
-      files: ['**/src/**/*.test.{ts,tsx}'],
+      files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
       rules: {
-        'i18next/no-literal-string': 'off'
+        'i18next/no-literal-string': 'off',
+        'max-len': 'off'
       }
     },
     {
