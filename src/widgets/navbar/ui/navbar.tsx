@@ -26,9 +26,7 @@ export const Navbar = (props: NavbarProps): JSX.Element => {
         {t('Entry')}
       </Button>
         <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-          {t('Lorem ipsum dolor sit amet, consectetur adipisicing elit. ' +
-            'Cupiditate, dicta dolorem ex exercitationem facere fugiat impedit neque nobis repellat totam. ' +
-            'At eos illo ipsa libero necessitatibus nulla numquam ut. Accusantium?')}
+          {t('Modal custom text')}
         </Modal>
     </div>
   )
