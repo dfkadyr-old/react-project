@@ -25,6 +25,15 @@ export const Modal = (props: ModalProps) => {
   const [isClosing, setIsClosing] = useState(false)
   const timerRef = useRef<ReturnType<typeof setTimeout>>()
 
+  const mods: Record<string, boolean> = {
+    [cls.opened]: isOpen,
+    [cls.isClosing]: isClosing
+  }
+
+  const onContentClick = (e: React.MouseEvent) => {
+    e.stopPropagation()
+  }
+
   const closeHandler = useCallback(() => {
     if (onClose) {
       setIsClosing(true)
@@ -41,10 +50,6 @@ export const Modal = (props: ModalProps) => {
     }
   }, [closeHandler])
 
-  const onContentClick = (e: React.MouseEvent) => {
-    e.stopPropagation()
-  }
-
   useEffect(() => {
     if (isOpen) {
       window.addEventListener('keydown', onKeyDown)
@@ -55,11 +60,6 @@ export const Modal = (props: ModalProps) => {
       window.removeEventListener('keydown', onKeyDown)
     }
   }, [isOpen, onKeyDown])
-
-  const mods: Record<string, boolean> = {
-    [cls.opened]: isOpen,
-    [cls.isClosing]: isClosing
-  }
 
   return (
     <Portal>

@@ -1,5 +1,7 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
+import { Theme } from 'app/providers/theme-provider'
+import { ThemeDecorator } from 'shared/config/storybook/theme-decorator'
 import { Modal } from 'shared/ui/modal/modal'
 
 export default {
@@ -17,3 +19,10 @@ Primary.args = {
   isOpen: true,
   children: 'Modal custom text'
 }
+
+export const Dark = Template.bind({})
+Dark.args = {
+  isOpen: true,
+  children: 'Modal custom text'
+}
+Dark.decorators = [ThemeDecorator(Theme.DARK)]
