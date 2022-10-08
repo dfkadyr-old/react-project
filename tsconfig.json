@@ -39,6 +39,7 @@
     }
   },
   "include": [
+    "./json-server",
     "./config",
     "./scripts",
     "./src/**/*.ts",
