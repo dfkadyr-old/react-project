@@ -21,6 +21,8 @@
   "Not found page": "Not found page",
   "Refresh page": "Refresh page",
   "Something went wrong": "Something went wrong",
+  "decrement": "decrement",
+  "increment": "increment",
   "throw error": "throw error",
   "toggle": "toggle"
 }

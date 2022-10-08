@@ -7,5 +7,7 @@
   "En": "Ru",
   "English": "Русский",
   "Entry": "Entry",
-  "Modal custom text": "Modal custom text"
+  "Modal custom text": "Modal custom text",
+  "increment": "increment",
+  "decrement": "decrement"
 }
