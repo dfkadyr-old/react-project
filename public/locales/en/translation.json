@@ -9,5 +9,8 @@
   "Entry": "Entry",
   "Modal custom text": "Modal custom text",
   "increment": "increment",
-  "decrement": "decrement"
+  "decrement": "decrement",
+  "Login": "Login",
+  "Enter username": "Enter username",
+  "Enter password": "Enter password"
 }
