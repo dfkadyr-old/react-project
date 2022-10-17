@@ -2,13 +2,16 @@
   "ABOUT_PAGE_TITLE": "ABOUT_PAGE_TITLE",
   "About": "About",
   "About page": "About page",
+  "Authorization Form": "Authorization Form",
   "Enter password": "Enter password",
   "Enter username": "Enter username",
   "Entry": "Entry",
   "Home": "Home",
+  "Incorrect username or password": "Incorrect username or password",
   "LANGUAGE_TITLE": "LANGUAGE_TITLE",
   "Language": "Language",
   "Login": "Login",
+  "Logout": "Logout",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Cupiditate, dicta dolorem ex exercitationem facere fugiat impedit neque nobis repellat totam": {
       " At eos illo ipsa libero necessitatibus nulla numquam ut": {

@@ -2,12 +2,15 @@
   "": "",
   "About": "About",
   "About page": "About page",
+  "Authorization Form": "",
   "Enter password": "Enter password",
   "Enter username": "Enter username",
   "Entry": "Entry",
   "Home": "Home",
+  "Incorrect username or password": "Incorrect username or password",
   "Language": "Language",
   "Login": "Login",
+  "Logout": "Logout",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
     " Cupiditate, dicta dolorem ex exercitationem facere fugiat impedit neque nobis repellat totam": {
       " At eos illo ipsa libero necessitatibus nulla numquam ut": {
