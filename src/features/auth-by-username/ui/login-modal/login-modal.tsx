@@ -1,4 +1,7 @@
+import { Suspense } from 'react'
+
 import { Modal } from 'shared/ui/modal'
+import { Spinner } from 'shared/ui/spinner'
 
 import { LoginForm } from '../login-form'
 
@@ -15,7 +18,9 @@ export const LoginModal = (props: LoginModalProps) => {
       onClose={onClose}
       lazy
     >
-      <LoginForm />
+      <Suspense fallback={<Spinner />}>
+        <LoginForm />
+      </Suspense>
     </Modal>
   )
 }
