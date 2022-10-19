@@ -39,7 +39,7 @@ export const LoginForm = memo((props: LoginFormProps) => {
   }, [dispatch])
 
   const onChangePassword = useCallback((value: string) => {
-    dispatch(loginActions.setPasswordName(value))
+    dispatch(loginActions.setPassword(value))
   }, [dispatch])
 
   const onLoginClick = useCallback(() => {

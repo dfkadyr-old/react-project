@@ -37,11 +37,11 @@ export default {
   moduleNameMapper: {
     '\\.s?css$': 'identity-obj-proxy',
     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx')
-  },
-  transformIgnorePatterns: [
-    '\\\\node_modules\\\\',
-    '\\.pnp\\.[^\\\\]+$'
-  ]
+  }
+  // transformIgnorePatterns: [
+  //   '\\\\node_modules\\\\',
+  //   '\\.pnp\\.[^\\\\]+$'
+  // ]
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
 

@@ -16,7 +16,7 @@ export const loginSlice = createSlice({
     setUserName: (state, action: PayloadAction<string>) => {
       state.username = action.payload
     },
-    setPasswordName: (state, action: PayloadAction<string>) => {
+    setPassword: (state, action: PayloadAction<string>) => {
       state.password = action.payload
     }
   },
