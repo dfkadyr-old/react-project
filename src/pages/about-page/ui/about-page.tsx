@@ -1,6 +1,7 @@
+import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 
-export const AboutPage = (): JSX.Element => {
+export const AboutPage = memo((): JSX.Element => {
   const { t } = useTranslation('about')
 
   return (
@@ -8,4 +9,4 @@ export const AboutPage = (): JSX.Element => {
       {t('About page')}
     </div>
   )
-}
+})

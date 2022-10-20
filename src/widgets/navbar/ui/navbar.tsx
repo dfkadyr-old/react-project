@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react'
+import { memo, useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -13,7 +13,7 @@ interface NavbarProps {
   className?: string
 }
 
-export const Navbar = (props: NavbarProps): JSX.Element => {
+export const Navbar = memo((props: NavbarProps): JSX.Element => {
   const { className } = props
   const { t } = useTranslation()
   const dispatch = useDispatch()
@@ -52,4 +52,4 @@ export const Navbar = (props: NavbarProps): JSX.Element => {
       <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
     </div>
   )
-}
+})

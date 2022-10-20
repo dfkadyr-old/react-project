@@ -15,5 +15,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Kadyr",
+    "lastname": "Dzhemaledinov",
+    "age": 27,
+    "currency": "USD",
+    "country": "Turkey",
+    "city": "Istanbul",
+    "username": "admin",
+    "avatar": "https://toppng.com/uploads/preview/cool-avatar-transparent-image-cool-boy-avatar-11562893383qsirclznyw.png"
+  }
 }

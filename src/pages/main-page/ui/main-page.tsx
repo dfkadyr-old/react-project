@@ -1,8 +1,9 @@
+import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { BugButton } from 'app/providers/error-boundary'
 
-export const MainPage = (): JSX.Element => {
+export const MainPage = memo((): JSX.Element => {
   const { t } = useTranslation('main')
 
   return (
@@ -11,4 +12,4 @@ export const MainPage = (): JSX.Element => {
       {t('Main page')}
     </div>
   )
-}
+})

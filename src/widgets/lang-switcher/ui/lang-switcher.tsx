@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { classNames } from 'shared/lib/class-names'
@@ -8,7 +9,7 @@ interface LangSwitcherProps {
   short?: boolean
 }
 
-export const LangSwitcher = (props: LangSwitcherProps): JSX.Element => {
+export const LangSwitcher = memo((props: LangSwitcherProps): JSX.Element => {
   const { className, short } = props
   const { t, i18n } = useTranslation()
 
@@ -25,4 +26,4 @@ export const LangSwitcher = (props: LangSwitcherProps): JSX.Element => {
       {t(short ? 'En' : 'English')}
     </Button>
   )
-}
+})

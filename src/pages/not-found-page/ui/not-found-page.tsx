@@ -1,10 +1,11 @@
+import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { classNames } from 'shared/lib/class-names'
 
 import cls from './not-found-page.module.scss'
 
-export const NotFoundPage = (): JSX.Element => {
+export const NotFoundPage = memo((): JSX.Element => {
   const { t } = useTranslation()
 
   return (
@@ -12,4 +13,4 @@ export const NotFoundPage = (): JSX.Element => {
       {t('Not found page')}
     </div>
   )
-}
+})
