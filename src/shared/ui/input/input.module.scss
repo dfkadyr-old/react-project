@@ -44,6 +44,10 @@
   animation: blink 1s forwards infinite;
 }
 
+.readonly {
+  opacity: 0.5;
+}
+
 .placeholder {
   color: var(--primary-color);
   margin-right: 5px;

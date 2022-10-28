@@ -1,1 +1,1 @@
-export { Text, TextTheme } from './text'
+export { Text, TextTheme, TextAlign } from './text'

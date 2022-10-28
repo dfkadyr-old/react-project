@@ -1,0 +1,25 @@
+.profile-card {
+  padding: 20px;
+  border: 2px solid var(--inverted-bg-color);
+}
+
+.input {
+  margin-top: 10px;
+}
+
+.loading,
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 250px;
+}
+
+.avatar-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.editing {
+  border: 2px solid var(--inverted-primary-color);
+}

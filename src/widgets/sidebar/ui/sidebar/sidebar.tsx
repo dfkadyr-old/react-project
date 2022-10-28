@@ -22,7 +22,12 @@ export const Sidebar = memo((props: SidebarProps): JSX.Element => {
   const onToggle = () => setCollapsed(prev => !prev)
 
   const listItems = useMemo(() =>
-    SidebarItemsList.map((item) => <SidebarItem key={item.path} item={item} isCollapsed={collapsed} />
+    SidebarItemsList.map((item) =>
+      <SidebarItem
+        key={item.path}
+        item={item}
+        isCollapsed={collapsed}
+      />
     ), [collapsed]
   )
 

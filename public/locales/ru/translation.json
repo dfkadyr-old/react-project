@@ -16,5 +16,19 @@
   "Authorization Form": "Authorization Form",
   "Incorrect username or password": "Incorrect username or password",
   "Logout": "Logout",
-  "Profile page": "Profile page"
+  "Profile page": "Profile page",
+  "Profile": "Profile",
+  "Enter name": "Enter name",
+  "Enter firstname": "Enter firstname",
+  "Enter lastname": "Enter lastname",
+  "Edit profile": "Edit profile",
+  "Cancel": "Cancel",
+  "Save": "Save",
+  "Enter avatar": "Enter avatar",
+  "Add currency": "Add currency",
+  "Add country": "Add country",
+  "Incorrect country": "Incorrect country",
+  "Incorrect age": "Incorrect age",
+  "Server Error": "Server Error",
+  "Data is empty": "Data is empty"
 }

@@ -72,7 +72,10 @@ module.exports = {
       {
         checksVoidReturn: false
       }
-    ]
+    ],
+    '@typescript-eslint/no-invalid-void-type': ['warn', { allowInGenericTypeArguments: false }],
+    '@typescript-eslint/no-non-null-assertion': 'warn',
+    '@typescript-eslint/prefer-nullish-coalescing': 'warn'
   },
   overrides: [
     {
