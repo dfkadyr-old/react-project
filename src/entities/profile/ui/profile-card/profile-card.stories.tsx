@@ -13,31 +13,28 @@ export default {
   component: ProfileCard,
   argTypes: {
     backgroundColor: { control: 'color' }
+  },
+  args: {
+    data: {
+      username: 'admin',
+      age: 22,
+      country: Country.Ukraine,
+      lastname: 'last',
+      first: 'admin',
+      currency: Currency.RUB,
+      city: 'Istanbul',
+      avatar: AvatarImg
+    }
   }
 } as ComponentMeta<typeof ProfileCard>
 
 const Template: ComponentStory<typeof ProfileCard> = (args) => <ProfileCard {...args} />
 
-const cardData = {
-  username: 'admin',
-  age: 22,
-  country: Country.Ukraine,
-  lastname: 'last',
-  first: 'admin',
-  currency: Currency.RUB,
-  city: 'Istanbul',
-  avatar: AvatarImg
-}
-
 export const Primary = Template.bind({})
-Primary.args = {
-  data: cardData
-}
+Primary.args = {}
 
 export const PrimaryDark = Template.bind({})
-PrimaryDark.args = {
-  data: cardData
-}
+PrimaryDark.args = {}
 PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]
 
 export const isLoading = Template.bind({})
@@ -52,6 +49,5 @@ withError.args = {
 
 export const isReadonly = Template.bind({})
 isReadonly.args = {
-  data: cardData,
   isReadonly: true
 }
