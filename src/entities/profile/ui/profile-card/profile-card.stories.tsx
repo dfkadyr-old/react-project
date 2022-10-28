@@ -3,7 +3,6 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Theme } from 'app/providers/theme-provider'
 import { Country } from 'entities/country'
 import { Currency } from 'entities/currency'
-import AvatarImg from 'shared/assets/tests/avatar.png'
 import { ThemeDecorator } from 'shared/config/storybook/theme-decorator'
 
 import { ProfileCard } from './profile-card'
@@ -23,7 +22,7 @@ export default {
       first: 'asd',
       city: 'asf',
       currency: Currency.USD,
-      avatar: AvatarImg
+      avatar: 'https://toppng.com/uploads/preview/cool-avatar-transparent-image-cool-boy-avatar-11562893383qsirclznyw.png'
     }
   }
 } as ComponentMeta<typeof ProfileCard>
