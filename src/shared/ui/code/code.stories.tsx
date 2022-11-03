@@ -17,17 +17,47 @@ const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
-  text: '<!DOCTYPE html>\n<html>\n  <body>\n    <p id="hello"></p>\n\n    <script>\n      document.getElementById("hello").innerHTML = "Hello, world!";\n    </script>\n  </body>\n</html>;'
+  text: 'export default {\n' +
+    '    title: \'shared/Code\',\n' +
+    '    component: Code,\n' +
+    '    argTypes: {\n' +
+    '        backgroundColor: { control: \'color\' },\n' +
+    '    },\n' +
+    '} as ComponentMeta<typeof Code>;\n' +
+    '\n' +
+    'const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;\n' +
+    '\n' +
+    'export const Normal = Template.bind({});'
 }
 
 export const PrimaryDark = Template.bind({})
 PrimaryDark.args = {
-  text: '<!DOCTYPE html>\n<html>\n  <body>\n    <p id="hello"></p>\n\n    <script>\n      document.getElementById("hello").innerHTML = "Hello, world!";\n    </script>\n  </body>\n</html>;'
+  text: 'export default {\n' +
+    '    title: \'shared/Code\',\n' +
+    '    component: Code,\n' +
+    '    argTypes: {\n' +
+    '        backgroundColor: { control: \'color\' },\n' +
+    '    },\n' +
+    '} as ComponentMeta<typeof Code>;\n' +
+    '\n' +
+    'const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;\n' +
+    '\n' +
+    'export const Normal = Template.bind({});'
 }
 PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]
 
 export const PrimaryOrange = Template.bind({})
 PrimaryOrange.args = {
-  text: '<!DOCTYPE html>\n<html>\n  <body>\n    <p id="hello"></p>\n\n    <script>\n      document.getElementById("hello").innerHTML = "Hello, world!";\n    </script>\n  </body>\n</html>;'
+  text: 'export default {\n' +
+    '    title: \'shared/Code\',\n' +
+    '    component: Code,\n' +
+    '    argTypes: {\n' +
+    '        backgroundColor: { control: \'color\' },\n' +
+    '    },\n' +
+    '} as ComponentMeta<typeof Code>;\n' +
+    '\n' +
+    'const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />;\n' +
+    '\n' +
+    'export const Normal = Template.bind({});'
 }
 PrimaryDark.decorators = [ThemeDecorator(Theme.ORANGE)]
