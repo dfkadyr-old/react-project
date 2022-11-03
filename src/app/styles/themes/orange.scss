@@ -1,8 +1,16 @@
 .app_orange_theme {
+  // Primary
   --bg-color: #efebe9;
   --inverted-bg-color: #ffb74d;
   --primary-color: #3b3b3b;
   --inverted-primary-color: #a1887f;
   --secondary-color: #ff7043;
   --inverted-secondary-color: #ffab91;
+
+  // Skeleton
+  --skeleton-color: #e59c31;
+  --skeleton-shadow: #c27b65;
+
+  // Code
+  --code-bg: #fff;
 }
