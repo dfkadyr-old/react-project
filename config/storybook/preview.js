@@ -1,6 +1,7 @@
 import { addDecorator } from '@storybook/react'
 
 import { Theme } from '../../src/app/providers/theme-provider'
+import { LokiDecorator } from '../../src/shared/config/storybook/loki-decorator'
 import { RouterDecorator } from '../../src/shared/config/storybook/router-decorator'
 import { StyleDecorator } from '../../src/shared/config/storybook/style-decorator'
 import { ThemeDecorator } from '../../src/shared/config/storybook/theme-decorator'
@@ -18,3 +19,4 @@ export const parameters = {
 addDecorator(StyleDecorator)
 addDecorator(ThemeDecorator(Theme.LIGHT))
 addDecorator(RouterDecorator)
+addDecorator(LokiDecorator)
