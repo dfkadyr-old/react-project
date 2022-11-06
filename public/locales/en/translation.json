@@ -32,5 +32,7 @@
   "Server Error": "Server Error",
   "Data is empty": "Data is empty",
   "Article not found": "Article not found",
-  "Error to get article by id": "Error to get article by id"
+  "Error to get article by id": "Error to get article by id",
+  "Comment": "Comment",
+  "Comments": "Comments"
 }

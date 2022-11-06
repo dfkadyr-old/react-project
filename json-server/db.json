@@ -117,13 +117,15 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN"
+      "role": "ADMIN",
+      "avatar": "https://static.sobaka.ru/images/image/00/80/54/85/_normal.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER"
+      "role": "USER",
+      "avatar": "https://focus.ua/static/storage/thumbs/920x465/b/76/af801021-9b1d0d9c0675629f182e59c94b88c76b.jpg?v=7480_1"
     }
   ],
   "profile": {

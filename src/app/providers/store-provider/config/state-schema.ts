@@ -8,6 +8,7 @@ import { CounterSchema } from 'entities/counter'
 import { ProfileSchema } from 'entities/profile'
 import { UserSchema } from 'entities/user'
 import { LoginSchema } from 'features/auth-by-username'
+import { ArticleDetailsCommentsSchema } from 'pages/article-details-page'
 
 export interface StateSchema {
   counter: CounterSchema
@@ -17,6 +18,7 @@ export interface StateSchema {
   loginForm?: LoginSchema
   profile?: ProfileSchema
   articleDetails?: ArticleDetailsSchema
+  articleDetailsComments?: ArticleDetailsCommentsSchema
 }
 
 export type StateSchemaKey = keyof StateSchema

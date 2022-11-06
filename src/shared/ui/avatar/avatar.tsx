@@ -6,7 +6,7 @@ import cls from './avatar.module.scss'
 
 interface AvatarProps {
   className?: string
-  src: string
+  src?: string
   size?: number
   alt?: string
 }
