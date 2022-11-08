@@ -8,6 +8,9 @@ import { Skeleton } from './skeleton'
 export default {
   title: 'shared/Skeleton',
   component: Skeleton,
+  parameters: {
+    loki: { skip: true }
+  },
   argTypes: {
     backgroundColor: { control: 'color' }
   }
