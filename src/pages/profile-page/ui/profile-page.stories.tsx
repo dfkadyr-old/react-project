@@ -16,6 +16,7 @@ export default {
 } as ComponentMeta<typeof ProfilePage>
 
 const formData = {
+  id: '1',
   username: 'admin',
   age: 22,
   country: Country.Ukraine,

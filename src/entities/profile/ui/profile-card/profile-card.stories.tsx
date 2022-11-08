@@ -15,6 +15,7 @@ export default {
   },
   args: {
     data: {
+      id: '1',
       username: 'admin',
       age: 22,
       country: Country.Ukraine,

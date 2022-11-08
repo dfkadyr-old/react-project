@@ -19,9 +19,9 @@ body {
 }
 
 .page-wrapper {
-  height: calc(100vh - var(--navbar-height));
-  width: 100%;
-  padding: 20px 20px 20px 45px;
   flex-grow: 1;
+  flex-shrink: 100;
+  height: calc(100vh - var(--navbar-height));
+  padding: 20px 20px 20px 45px;
   overflow-y: auto;
 }

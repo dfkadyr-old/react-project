@@ -29,7 +29,9 @@
       "img": "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -110,6 +112,36 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "add",
+      "id": "cHU5-wR"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "user test",
+      "id": "XjxZCHJ"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "dd",
+      "id": "bvZWIy6"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "test Kadyr",
+      "id": "PZn_Cnk"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "test Dark",
+      "id": "k4K-Xy1"
     }
   ],
   "users": [
@@ -128,14 +160,28 @@
       "avatar": "https://focus.ua/static/storage/thumbs/920x465/b/76/af801021-9b1d0d9c0675629f182e59c94b88c76b.jpg?v=7480_1"
     }
   ],
-  "profile": {
-    "first": "uyu",
-    "lastname": "Dzhemaledinov",
-    "age": 27,
-    "currency": "USD",
-    "country": "Kazakhstan",
-    "city": "Istanbul",
-    "username": "admin",
-    "avatar": "https://toppng.com/uploads/preview/cool-avatar-transparent-image-cool-boy-avatar-11562893383qsirclznyw.png"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "uyu",
+      "lastname": "Dzhemaledinov",
+      "age": 27,
+      "currency": "USD",
+      "country": "Kazakhstan",
+      "city": "Istanbul",
+      "username": "admin",
+      "avatar": "https://toppng.com/uploads/preview/cool-avatar-transparent-image-cool-boy-avatar-11562893383qsirclznyw.png"
+    },
+    {
+      "id": "2",
+      "first": "test",
+      "lastname": "usranme",
+      "age": 37,
+      "currency": "EUR",
+      "country": "Belarus",
+      "city": "Moscow",
+      "username": "user",
+      "avatar": "https://focus.ua/static/storage/thumbs/920x465/b/76/af801021-9b1d0d9c0675629f182e59c94b88c76b.jpg?v=7480_1"
+    }
+  ]
 }
