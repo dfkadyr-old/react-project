@@ -43,3 +43,8 @@ Loading.args = {
   },
   isLoading: true
 }
+Loading.story = {
+  parameters: {
+    loki: { skip: true }
+  }
+}

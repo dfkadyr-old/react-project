@@ -119,6 +119,11 @@ Loading.decorators = [StoreDecorator({
     isLoading: true
   }
 })]
+Loading.story = {
+  parameters: {
+    loki: { skip: true }
+  }
+}
 
 export const Error = Template.bind({})
 Error.args = {}
