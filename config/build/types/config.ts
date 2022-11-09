@@ -14,11 +14,17 @@ export interface BuildEnv {
   apiUrl?: string
 }
 
+export enum Project {
+  'storybook',
+  'frontend',
+  'jest',
+}
+
 export interface BuildOptions {
   mode: BuildMode
   paths: BuildPaths
   isDev: boolean
   port: number
   apiUrl: string
-  project: 'storybook' | 'frontend' | 'jest'
+  project: Project
 }

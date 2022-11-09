@@ -2,32 +2,21 @@ import webpack from 'webpack'
 
 import { buildBabelLoader } from './loaders/buildBabelLoader'
 import { buildCssLoader } from './loaders/buildCssLoader'
+import { buildFileLoader } from './loaders/buildFileLoader'
+import { buildSvgLoader } from './loaders/buildSvgLoader'
+import { buildTypeScriptLoader } from './loaders/buildTypeScriptLoader'
 import { BuildOptions } from './types/config'
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
-  const svgLoader = {
-    test: /\.svg$/,
-    use: ['@svgr/webpack']
-  }
+  const svgLoader = buildSvgLoader()
 
   const babelLoader = buildBabelLoader(options.isDev)
 
   const cssLoader = buildCssLoader(options.isDev)
 
-  const typescriptLoader = {
-    test: /\.tsx?$/,
-    use: 'ts-loader',
-    exclude: /node_modules/
-  }
+  const typescriptLoader = buildTypeScriptLoader()
 
-  const fileLoader = {
-    test: /\.(png|jpe?g|gif|woff2|woff)$/i,
-    use: [
-      {
-        loader: 'file-loader'
-      }
-    ]
-  }
+  const fileLoader = buildFileLoader()
 
   return [
     fileLoader,

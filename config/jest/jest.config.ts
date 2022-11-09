@@ -5,11 +5,13 @@
 
 import path from 'path'
 
+import { Project } from '../build/types/config'
+
 export default {
   globals: {
     __IS_DEV__: true,
     __API__: true,
-    __PROJECT__: 'jest'
+    __PROJECT__: Project.jest
   },
   clearMocks: true,
   testEnvironment: 'jsdom',
