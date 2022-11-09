@@ -5,7 +5,7 @@ import webpack, { DefinePlugin, RuleSetRule } from 'webpack'
 import { buildCssLoader } from '../build/loaders/buildCssLoader'
 import { buildFileLoader } from '../build/loaders/buildFileLoader'
 import { buildSvgLoader } from '../build/loaders/buildSvgLoader'
-import { BuildPaths } from '../build/types/config'
+import { BuildPaths, Project } from '../build/types/config'
 
 export default ({ config }: { config: webpack.Configuration }) => {
   const paths: BuildPaths = {
@@ -36,7 +36,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
   config.plugins?.push(new DefinePlugin({
     __IS_DEV__: true,
     __API__: JSON.stringify('http://localhost:8000'),
-    __PROJECT__: JSON.stringify('storybook')
+    __PROJECT__: JSON.stringify(Project.Storybook)
   }))
 
   return config

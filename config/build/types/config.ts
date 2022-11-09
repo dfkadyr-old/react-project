@@ -15,9 +15,9 @@ export interface BuildEnv {
 }
 
 export enum Project {
-  'storybook',
-  'frontend',
-  'jest',
+  Storybook = 'storybook',
+  Frontend = 'frontend',
+  Jest = 'jest',
 }
 
 export interface BuildOptions {

@@ -11,7 +11,7 @@ export default {
   globals: {
     __IS_DEV__: true,
     __API__: true,
-    __PROJECT__: Project.jest
+    __PROJECT__: Project.Jest
   },
   clearMocks: true,
   testEnvironment: 'jsdom',
