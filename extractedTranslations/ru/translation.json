@@ -26,6 +26,7 @@
   "Enter username": "Enter username",
   "Entry": "Entry",
   "Error to get article by id": "Error to get article by id",
+  "Go to entities": "Go to entities",
   "Home": "Home",
   "Incorrect age": "Incorrect age",
   "Incorrect country": "Incorrect country",
@@ -49,6 +50,14 @@
   "Not found page": "Not found page",
   "Profile": "Profile",
   "Profile page": "Profile page",
+  "Read more": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  },
+  "Read mpre": "Read mpre",
   "Refresh page": "Refresh page",
   "Save": "Save",
   "Server Error": "Server Error",

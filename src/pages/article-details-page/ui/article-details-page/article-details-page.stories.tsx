@@ -24,6 +24,11 @@ const article: Article = {
   img: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',
   views: 1022,
   createdAt: '26.02.2022',
+  user: {
+    id: '1',
+    username: 'dfkadyr',
+    avatar: 'https://toppng.com/uploads/preview/cool-avatar-transparent-image-cool-boy-avatar-11562893383qsirclznyw.png'
+  },
   type: [ArticleType.IT],
   blocks: [
     {

@@ -1,13 +1,20 @@
-import { memo } from 'react'
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import { Article, ArticleList, ArticleView } from 'entities/article'
-import { classNames } from 'shared/lib/class-names'
+import { Theme } from 'app/providers/theme-provider'
+import { Article, ArticleView } from 'entities/article'
+import { ThemeDecorator } from 'shared/config/storybook/theme-decorator'
 
-import cls from './articles-page.module.scss'
+import { ArticleList } from './article-list'
 
-interface ArticlesPageProps {
-  className?: string
-}
+export default {
+  title: 'entities/Article/ArticleList',
+  component: ArticleList,
+  argTypes: {
+    backgroundColor: { control: 'color' }
+  }
+} as ComponentMeta<typeof ArticleList>
+
+const Template: ComponentStory<typeof ArticleList> = (args) => <ArticleList {...args} />
 
 const data =
   {
@@ -143,11 +150,76 @@ const data =
     ]
   } as Article
 
-export const ArticlesPage = memo((props: ArticlesPageProps) => {
-  const { className } = props
-  return (
-    <div className={classNames(cls.ArticlesPage, {}, [className])}>
-      <ArticleList isLoading view={ArticleView.CARD} articles={[data]} />
-    </div>
-  )
-})
+export const ListView = Template.bind({})
+ListView.args = {
+  articles: new Array(9)
+    .fill(0)
+    .map((_item, index) => ({
+      ...data,
+      id: String(index)
+    })),
+  isLoading: false,
+  view: ArticleView.LIST
+}
+
+export const ListViewDark = Template.bind({})
+ListViewDark.args = {
+  articles: new Array(9)
+    .fill(0)
+    .map((_item, index) => ({
+      ...data,
+      id: String(index)
+    })),
+  isLoading: false,
+  view: ArticleView.LIST
+}
+ListViewDark.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const ListViewLoading = Template.bind({})
+ListViewLoading.args = {
+  articles: [],
+  isLoading: true,
+  view: ArticleView.LIST
+}
+ListViewLoading.story = {
+  parameters: {
+    loki: { skip: true }
+  }
+}
+
+export const CardView = Template.bind({})
+CardView.args = {
+  articles: new Array(9)
+    .fill(0)
+    .map((_item, index) => ({
+      ...data,
+      id: String(index)
+    })),
+  isLoading: false,
+  view: ArticleView.CARD
+}
+
+export const CardViewDark = Template.bind({})
+CardViewDark.args = {
+  articles: new Array(9)
+    .fill(0)
+    .map((_item, index) => ({
+      ...data,
+      id: String(index)
+    })),
+  isLoading: false,
+  view: ArticleView.CARD
+}
+CardViewDark.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const CardViewLoading = Template.bind({})
+CardViewLoading.args = {
+  articles: [],
+  isLoading: true,
+  view: ArticleView.CARD
+}
+CardViewLoading.story = {
+  parameters: {
+    loki: { skip: true }
+  }
+}
