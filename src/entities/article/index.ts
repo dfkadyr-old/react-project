@@ -5,3 +5,4 @@ export { articleDetailsReducer } from './model/slice/article-details-slice'
 export { ArticleBlockType, ArticleType } from './model/types/article'
 
 export { ArticleList } from './ui/article-list'
+export { ArticleViewSelector } from './ui/article-view-selector'

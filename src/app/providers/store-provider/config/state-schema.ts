@@ -10,6 +10,7 @@ import { UserSchema } from 'entities/user'
 import { AddCommentFormSchema } from 'features/add-comment-form'
 import { LoginSchema } from 'features/auth-by-username'
 import { ArticleDetailsCommentsSchema } from 'pages/article-details-page'
+import { ArticlesPageSchema } from 'pages/articles-page'
 
 export interface StateSchema {
   counter: CounterSchema
@@ -21,6 +22,7 @@ export interface StateSchema {
   articleDetails?: ArticleDetailsSchema
   articleDetailsComments?: ArticleDetailsCommentsSchema
   addCommentForm?: AddCommentFormSchema
+  articlesPage?: ArticlesPageSchema
 }
 
 export type StateSchemaKey = keyof StateSchema
