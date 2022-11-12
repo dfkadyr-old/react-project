@@ -35,21 +35,21 @@ export const Navbar = memo((props: NavbarProps): JSX.Element => {
 
   if (authData) {
     return (
-      <div className={classNames(cls.navbar, {}, [className])}>
+      <header className={classNames(cls.navbar, {}, [className])}>
         <Button theme={ButtonTheme.CLEAR_INVERTED} className={cls.links} onClick={onLogout}>
           {t('Logout')}
         </Button>
         <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
-      </div>
+      </header>
     )
   }
 
   return (
-    <div className={classNames(cls.navbar, {}, [className])}>
+    <header className={classNames(cls.navbar, {}, [className])}>
       <Button theme={ButtonTheme.CLEAR_INVERTED} className={cls.links} onClick={onShowModal}>
         {t('Entry')}
       </Button>
       <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
-    </div>
+    </header>
   )
 })

@@ -12,6 +12,7 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic
 import { useAppDispatch } from 'shared/lib/hooks/use-app-dispatch'
 import { useInitialEffect } from 'shared/lib/hooks/use-initial-effect'
 import { Button } from 'shared/ui/button'
+import { Page } from 'shared/ui/page'
 import { Text } from 'shared/ui/text'
 
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
@@ -52,15 +53,15 @@ export const ArticleDetailsPage = memo((props: ArticleDetailsPageProps) => {
 
   if (!id) {
     return (
-      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         {t('Article not found')}
-      </div>
+      </Page>
     )
   }
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+      <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <Button onClick={onBackToList}>
           {t('Go to entities')}
         </Button>
@@ -68,7 +69,7 @@ export const ArticleDetailsPage = memo((props: ArticleDetailsPageProps) => {
         <Text className={cls.commentTitle} title={t('Comments')} />
         <AddCommentForm onSendComment={onSendComment} />
         <CommentList isLoading={isLoading} comments={comments} />
-      </div>
+      </Page>
     </DynamicModuleLoader>
   )
 })
