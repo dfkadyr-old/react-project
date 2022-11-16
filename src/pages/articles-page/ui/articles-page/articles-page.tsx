@@ -6,7 +6,7 @@ import { classNames } from 'shared/lib/class-names'
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic-module-loader'
 import { useAppDispatch } from 'shared/lib/hooks/use-app-dispatch'
 import { useInitialEffect } from 'shared/lib/hooks/use-initial-effect'
-import { Page } from 'shared/ui/page'
+import { Page } from 'widgets/page'
 
 import {
   getArticlesPageIsLoading, getArticlesPageView

@@ -12,8 +12,8 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic
 import { useAppDispatch } from 'shared/lib/hooks/use-app-dispatch'
 import { useInitialEffect } from 'shared/lib/hooks/use-initial-effect'
 import { Button } from 'shared/ui/button'
-import { Page } from 'shared/ui/page'
 import { Text } from 'shared/ui/text'
+import { Page } from 'widgets/page'
 
 import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
 import { addCommentForArticle } from '../../model/services/add-comment-for-article'

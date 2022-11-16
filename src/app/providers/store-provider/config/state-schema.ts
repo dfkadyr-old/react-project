@@ -9,10 +9,12 @@ import { AddCommentFormSchema } from 'features/add-comment-form'
 import { LoginSchema } from 'features/auth-by-username'
 import { ArticleDetailsCommentsSchema } from 'pages/article-details-page'
 import { ArticlesPageSchema } from 'pages/articles-page'
+import { PageSchema } from 'widgets/page'
 
 export interface StateSchema {
   counter: CounterSchema
   user: UserSchema
+  page: PageSchema
 
   // Async reducers
   loginForm?: LoginSchema

@@ -76,7 +76,8 @@ module.exports = {
     '@typescript-eslint/no-invalid-void-type': ['warn', { allowInGenericTypeArguments: false }],
     '@typescript-eslint/no-non-null-assertion': 'warn',
     '@typescript-eslint/prefer-nullish-coalescing': 'warn',
-    '@typescript-eslint/restrict-template-expressions': 'off'
+    '@typescript-eslint/restrict-template-expressions': 'off',
+    'n/no-callback-literal': 'off'
   },
   overrides: [
     {
