@@ -77,7 +77,8 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'warn',
     '@typescript-eslint/prefer-nullish-coalescing': 'warn',
     '@typescript-eslint/restrict-template-expressions': 'off',
-    'n/no-callback-literal': 'off'
+    'n/no-callback-literal': 'off',
+    '@typescript-eslint/array-type': 'off'
   },
   overrides: [
     {

@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, memo, ReactNode } from 'react'
+import { ButtonHTMLAttributes, ReactNode } from 'react'
 
 import { classNames, Mods } from 'shared/lib/class-names'
 
@@ -29,7 +29,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: () => void
 }
 
-export const Button = memo((props: ButtonProps) => {
+export const Button = (props: ButtonProps) => {
   const {
     children,
     className,
@@ -55,4 +55,4 @@ export const Button = memo((props: ButtonProps) => {
       {children}
     </button>
   )
-})
+}

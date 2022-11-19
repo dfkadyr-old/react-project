@@ -15,7 +15,7 @@ export default ({ config }: { config: webpack.Configuration }) => {
     src: path.resolve(__dirname, '..', '..', 'src')
   }
   config.resolve!.modules = [paths.src, 'node_modules']
-  config.resolve!.extensions?.push('.ts', '.tsx')
+  config.resolve!.extensions?.push('index.ts', '.tsx')
 
   const rules = config.module!.rules as RuleSetRule[]
   config.module!.rules = rules.map((rule: RuleSetRule) => {

@@ -4,7 +4,7 @@ import { Theme } from 'app/providers/theme-provider'
 import { ThemeDecorator } from 'shared/config/storybook/theme-decorator'
 import { Text } from 'shared/ui/text'
 
-import { Card } from './card'
+import { Card, CardTheme } from './card'
 
 export default {
   title: 'shared/Card',
@@ -16,13 +16,26 @@ export default {
 
 const Template: ComponentStory<typeof Card> = (args) => <Card {...args} />
 
-export const Primary = Template.bind({})
-Primary.args = {
+export const Normal = Template.bind({})
+Normal.args = {
   children: <Text title="test" text="text text" />
 }
 
-export const PrimaryDark = Template.bind({})
-PrimaryDark.args = {
+export const NormalDark = Template.bind({})
+NormalDark.args = {
   children: <Text title="test" text="text text" />
 }
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]
+NormalDark.decorators = [ThemeDecorator(Theme.DARK)]
+
+export const Outlined = Template.bind({})
+Outlined.args = {
+  children: <Text title="test" text="text text" />,
+  theme: CardTheme.OUTLINED
+}
+
+export const OutlinedDark = Template.bind({})
+OutlinedDark.args = {
+  children: <Text title="test" text="text text" />,
+  theme: CardTheme.OUTLINED
+}
+OutlinedDark.decorators = [ThemeDecorator(Theme.DARK)]

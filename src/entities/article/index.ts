@@ -1,8 +1,10 @@
 export { ArticleDetails } from './ui/article-details'
-export { Article, ArticleView } from './model/types/article'
+export { Article, ArticleView, ArticleSortField } from './model/types/article'
 export { ArticleDetailsSchema } from './model/types/article-details-schema'
 export { articleDetailsReducer } from './model/slice/article-details-slice'
 export { ArticleBlockType, ArticleType } from './model/types/article'
 
 export { ArticleList } from './ui/article-list'
 export { ArticleViewSelector } from './ui/article-view-selector'
+export { ArticleSortSelector } from './ui/article-sort-selector'
+export { ArticleTypeTabs } from './ui/article-type-tabs'

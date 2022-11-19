@@ -4,21 +4,23 @@ import { classNames, Mods } from 'shared/lib/class-names'
 
 import cls from './select.module.scss'
 
-interface SelectOptions {
+export interface SelectOption<T extends string> {
   label: string
-  value: string
+  value: T
 }
 
-interface SelectProps {
+interface SelectProps<T extends string> {
   className?: string
   label?: string
-  options: SelectOptions[]
-  value?: string
+  options: Array<SelectOption<T>>
+  value?: T
   isReadonly?: boolean
-  onChange?: (value: string) => void
+  onChange?: (value: T) => void
 }
 
-export const Select = memo((props: SelectProps) => {
+const typedMemo: <T>(c: T) => T = memo
+
+export const Select = typedMemo(<T extends string>(props: SelectProps<T>) => {
   const { className, label, options, value, onChange, isReadonly } = props
   const mods: Mods = {}
 
@@ -29,7 +31,7 @@ export const Select = memo((props: SelectProps) => {
   }, [options])
 
   const onChangeHandler = useCallback((e: ChangeEvent<HTMLSelectElement>) => {
-    onChange?.(e.target.value)
+    onChange?.(e.target.value as T)
   }, [onChange])
 
   return (

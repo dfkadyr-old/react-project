@@ -32,7 +32,7 @@ export const Page = memo((props: PageProps) => {
       path: pathname,
       position: e.currentTarget.scrollTop
     }))
-  }, 600)
+  }, 500)
 
   useInfiniteScroll({
     triggerRef,
@@ -51,7 +51,7 @@ export const Page = memo((props: PageProps) => {
       className={classNames(cls.page, {}, [className])}
     >
       {children}
-      <div ref={triggerRef} />
+      {onScrollEnd ? <div className={cls.trigger} ref={triggerRef} /> : null}
     </section>
   )
 })
