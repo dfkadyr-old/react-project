@@ -496,7 +496,7 @@
       "id": "18",
       "title": "Научная статья - Биология",
       "subtitle": "БиологиЯ",
-      "img": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
+      "img": "https://www.w3schools.com/w3images/avatar2.png",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
@@ -595,6 +595,12 @@
       "userId": "1",
       "text": "python!!!",
       "id": "p5rMadd"
+    },
+    {
+      "articleId": "3",
+      "userId": "1",
+      "text": "123213",
+      "id": "Zu_RNuF"
     }
   ],
   "users": [
@@ -603,14 +609,14 @@
       "username": "admin",
       "password": "123",
       "role": "ADMIN",
-      "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
+      "avatar": "https://www.w3schools.com/w3images/avatar2.png"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
       "role": "USER",
-      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+      "avatar": "https://www.w3schools.com/howto/img_avatar2.png"
     }
   ],
   "profile": [
@@ -623,7 +629,7 @@
       "country": "Belarus",
       "city": "Moscow",
       "username": "admin213",
-      "avatar": "https://avatars.mds.yandex.net/get-zen_doc/3413519/pub_5ff887b2fe4e686f6ae6ba3f_5ff887d7f906b16872a69755/scale_1200"
+      "avatar": "https://www.w3schools.com/w3images/avatar2.png"
     },
     {
       "id": "2",
@@ -634,7 +640,7 @@
       "country": "Russia",
       "city": "Moscow",
       "username": "ulbi tv",
-      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+      "avatar": "https://www.w3schools.com/howto/img_avatar2.png"
     }
   ]
 }

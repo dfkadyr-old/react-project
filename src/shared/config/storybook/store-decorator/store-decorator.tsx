@@ -3,9 +3,9 @@ import { Story } from '@storybook/react'
 import { StateSchema, StoreProvider } from 'app/providers/store-provider'
 import { articleDetailsReducer } from 'entities/article'
 import { profileReducer } from 'entities/profile'
-import { addCommentFormReducer } from 'features/add-comment-form/model/slices/add-comment-form-slice'
-import { loginReducer } from 'features/auth-by-username/model/slice/login-slice'
-import { articleDetailsCommentsReducer } from 'pages/article-details-page/model/slices/article-details-comments-slice'
+import { addCommentFormReducer } from 'features/add-comment-form'
+import { loginReducer } from 'features/auth-by-username'
+import { articleDetailsPageReducer } from 'pages/article-details-page'
 import { ReducersList } from 'shared/lib/components/dynamic-module-loader'
 
 const defaultAsyncReducers: ReducersList = {
@@ -13,7 +13,7 @@ const defaultAsyncReducers: ReducersList = {
   profile: profileReducer,
   articleDetails: articleDetailsReducer,
   addCommentForm: addCommentFormReducer,
-  articleDetailsComments: articleDetailsCommentsReducer
+  articleDetailsPage: articleDetailsPageReducer
 }
 
 export const StoreDecorator = (

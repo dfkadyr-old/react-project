@@ -17,3 +17,18 @@ body {
 .content-page {
   display: flex;
 }
+
+*::-webkit-scrollbar {
+  width: 12px;               /* scrollbar width */
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--card-bg);        /* track color */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--inverted-primary-color);    /* die color */
+  border-radius: 20px;       /* die rounding */
+  border: 2px solid var(--primary-color);  /* padding around the die */
+}
