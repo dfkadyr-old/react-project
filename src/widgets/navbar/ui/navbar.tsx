@@ -4,8 +4,11 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { getUserAuthData, userActions } from 'entities/user'
 import { LoginModal } from 'features/auth-by-username'
+import { RoutePath } from 'shared/config/route-config'
 import { classNames } from 'shared/lib/class-names'
+import { AppLink, AppLinkTheme } from 'shared/ui/app-link'
 import { Button, ButtonTheme } from 'shared/ui/button'
+import { Text, TextTheme } from 'shared/ui/text'
 
 import cls from './navbar.module.scss'
 
@@ -36,6 +39,10 @@ export const Navbar = memo((props: NavbarProps): JSX.Element => {
   if (authData) {
     return (
       <header className={classNames(cls.navbar, {}, [className])}>
+        <Text className={cls.appName} title={t('dfkadyr App')} theme={TextTheme.INVERTED} />
+        <AppLink to={RoutePath.article_create} theme={AppLinkTheme.SECONDARY}>
+          {t('Create article')}
+        </AppLink>
         <Button theme={ButtonTheme.CLEAR_INVERTED} className={cls.links} onClick={onLogout}>
           {t('Logout')}
         </Button>

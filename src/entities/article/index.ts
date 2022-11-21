@@ -3,6 +3,7 @@ export { Article, ArticleView, ArticleSortField } from './model/types/article'
 export { ArticleDetailsSchema } from './model/types/article-details-schema'
 export { articleDetailsReducer } from './model/slice/article-details-slice'
 export { ArticleBlockType, ArticleType } from './model/types/article'
+export { getArticleDetailsData } from './model/selectors/article-details'
 
 export { ArticleList } from './ui/article-list'
 export { ArticleViewSelector } from './ui/article-view-selector'

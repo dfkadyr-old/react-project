@@ -1,17 +1,15 @@
 import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 import { ArticleDetails, ArticleList } from 'entities/article'
 import { CommentList } from 'entities/comment'
 import { AddCommentForm } from 'features/add-comment-form'
-import { RoutePath } from 'shared/config/route-config'
 import { classNames } from 'shared/lib/class-names'
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic-module-loader'
 import { useAppDispatch } from 'shared/lib/hooks/use-app-dispatch'
 import { useInitialEffect } from 'shared/lib/hooks/use-initial-effect'
-import { Button } from 'shared/ui/button'
 import { Text, TextSize } from 'shared/ui/text'
 import { Page } from 'widgets/page'
 
@@ -23,6 +21,7 @@ import { fetchCommentsByArticleId } from '../../model/services/fetch-comments-by
 import { articleDetailsPageReducer } from '../../model/slices'
 import { getArticleComments } from '../../model/slices/article-details-comments-slice'
 import { getArticleRecommendations } from '../../model/slices/article-details-page-recommendations-slice'
+import { ArticleDetailsPageHeader } from '../article-details-page-header'
 
 import cls from './article-details-page.module.scss'
 
@@ -38,7 +37,6 @@ export const ArticleDetailsPage = memo((props: ArticleDetailsPageProps) => {
   const { className } = props
   const dispatch = useAppDispatch()
   const { t } = useTranslation()
-  const navigate = useNavigate()
   const { id } = useParams<{ id: string }>()
   const comments = useSelector(getArticleComments.selectAll)
   const commentsIsLoading = useSelector(getArticleCommentsIsLoading)
@@ -48,10 +46,6 @@ export const ArticleDetailsPage = memo((props: ArticleDetailsPageProps) => {
   const onSendComment = useCallback((text: string) => {
     dispatch(addCommentForArticle(text))
   }, [dispatch])
-
-  const onBackToList = useCallback(() => {
-    navigate(RoutePath.articles)
-  }, [navigate])
 
   useInitialEffect(() => {
     dispatch(fetchCommentsByArticleId(id))
@@ -69,9 +63,7 @@ export const ArticleDetailsPage = memo((props: ArticleDetailsPageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers}>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-        <Button onClick={onBackToList}>
-          {t('Go to entities')}
-        </Button>
+        <ArticleDetailsPageHeader />
         <ArticleDetails id={id} />
         <Text size={TextSize.L} className={cls.commentTitle} title={t('Recommendation')} />
          <ArticleList
