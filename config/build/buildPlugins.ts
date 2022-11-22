@@ -1,6 +1,7 @@
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
 // eslint-disable-next-line import/default
 import CopyPlugin from 'copy-webpack-plugin'
+import Dotenv from 'dotenv-webpack'
 import HTMLWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import webpack from 'webpack'
@@ -9,7 +10,7 @@ import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
 import { BuildOptions } from './types/config'
 
 export function buildPlugins(props: BuildOptions): webpack.WebpackPluginInstance[] {
-  const { paths, isDev, apiUrl, project } = props
+  const { paths, isDev, project } = props
 
   const plugins = [
     new HTMLWebpackPlugin({
@@ -18,7 +19,6 @@ export function buildPlugins(props: BuildOptions): webpack.WebpackPluginInstance
     new webpack.ProgressPlugin(),
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
-      __API__: JSON.stringify(apiUrl),
       __PROJECT__: JSON.stringify(project)
     }),
     new MiniCssExtractPlugin({
@@ -29,7 +29,8 @@ export function buildPlugins(props: BuildOptions): webpack.WebpackPluginInstance
       patterns: [
         { from: paths.locales, to: paths.buildLocales }
       ]
-    })
+    }),
+    new Dotenv()
   ]
 
   if (isDev) {
