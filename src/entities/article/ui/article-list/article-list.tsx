@@ -1,12 +1,12 @@
 import { HTMLAttributeAnchorTarget, memo } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { ArticleListItemSkeleton } from 'entities/article/ui/article-list-item/article-list-item-skeleton'
 import { classNames } from 'shared/lib/class-names'
 import { Text } from 'shared/ui/text'
 
 import { Article, ArticleView } from '../../model/types/article'
 import { ArticleListItem } from '../article-list-item'
+import { ArticleListItemSkeleton } from '../article-list-item/article-list-item-skeleton'
 
 import cls from './article-list.module.scss'
 
@@ -43,6 +43,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
   }
 
   return (
+    // TODO add virtualized logic
     <div className={classNames('', {}, [className, cls[view]])}>
       {articles.length > 0 ? articles.map(renderArticle) : null}
       {isLoading && getSkeletons(view)}

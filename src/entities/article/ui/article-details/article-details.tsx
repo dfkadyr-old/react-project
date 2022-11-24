@@ -2,9 +2,6 @@ import { memo, useCallback, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 
-import { ArticleCodeBlock } from 'entities/article/ui/article-code-block'
-import { ArticleImageBlock } from 'entities/article/ui/article-image-block'
-import { ArticleTextBlock } from 'entities/article/ui/article-text-block'
 import CalendarIcon from 'shared/assets/icons/calendar-20-20.svg'
 import EyeIcon from 'shared/assets/icons/eye-20-20.svg'
 import { classNames } from 'shared/lib/class-names'
@@ -23,6 +20,9 @@ import {
 import { fetchArticleById } from '../../model/services/fetch-article-by-id'
 import { articleDetailsReducer } from '../../model/slice/article-details-slice'
 import { ArticleBlockType, ArticleBlockTypes } from '../../model/types/article'
+import { ArticleCodeBlock } from '../article-code-block'
+import { ArticleImageBlock } from '../article-image-block'
+import { ArticleTextBlock } from '../article-text-block'
 
 import cls from './article-details.module.scss'
 

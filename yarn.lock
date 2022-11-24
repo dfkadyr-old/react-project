@@ -6732,6 +6732,13 @@
   dependencies:
     "debug" "^3.2.7"
 
+"eslint-plugin-dfkadyr-plugin@^0.0.1":
+  "integrity" "sha512-cfYQT90aqCh+5wyZo0TiqLSTyIDOpt3iIJkgdIZGGkUWHmPZhLxsRCZ6sm0fO0jd0zLxZW27jPge6NKWHaoevA=="
+  "resolved" "https://registry.npmjs.org/eslint-plugin-dfkadyr-plugin/-/eslint-plugin-dfkadyr-plugin-0.0.1.tgz"
+  "version" "0.0.1"
+  dependencies:
+    "requireindex" "^1.2.0"
+
 "eslint-plugin-es@^4.1.0":
   "integrity" "sha512-GILhQTnjYE2WorX5Jyi5i4dz5ALWxBIdQECVQavL6s7cI76IZTDWleTHkxz/QT3kvcs2QlGHvKLYsSlPOlPXnQ=="
   "resolved" "https://registry.npmjs.org/eslint-plugin-es/-/eslint-plugin-es-4.1.0.tgz"
@@ -6864,7 +6871,7 @@
   "resolved" "https://registry.npmjs.org/eslint-visitor-keys/-/eslint-visitor-keys-3.3.0.tgz"
   "version" "3.3.0"
 
-"eslint@*", "eslint@^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8", "eslint@^3 || ^4 || ^5 || ^6 || ^7 || ^8", "eslint@^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0", "eslint@^6.0.0 || ^7.0.0 || ^8.0.0", "eslint@^7.0.0 || ^8.0.0", "eslint@^8.0.1", "eslint@^8.24.0", "eslint@>= 6", "eslint@>=4.19.1", "eslint@>=5", "eslint@>=7.0.0":
+"eslint@*", "eslint@^2 || ^3 || ^4 || ^5 || ^6 || ^7.2.0 || ^8", "eslint@^3 || ^4 || ^5 || ^6 || ^7 || ^8", "eslint@^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0", "eslint@^6.0.0 || ^7.0.0 || ^8.0.0", "eslint@^7.0.0 || ^8.0.0", "eslint@^8.0.1", "eslint@^8.24.0", "eslint@>= 6", "eslint@>=4.19.1", "eslint@>=5", "eslint@>=7", "eslint@>=7.0.0":
   "integrity" "sha512-dWFaPhGhTAiPcCgm3f6LI2MBWbogMnTJzFBbhXVRQDJPkr9pGZvVjlVfXd+vyDcWPA2Ic9L2AXPIQM0+vk/cSQ=="
   "resolved" "https://registry.npmjs.org/eslint/-/eslint-8.24.0.tgz"
   "version" "8.24.0"
@@ -12454,6 +12461,11 @@
   "integrity" "sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw=="
   "resolved" "https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz"
   "version" "2.0.2"
+
+"requireindex@^1.2.0":
+  "integrity" "sha512-L9jEkOi3ASd9PYit2cwRfyppc9NoABujTP8/5gFcbERmo5jUoAKovIC3fsF17pkTnGsrByysqX+Kxd2OTNI1ww=="
+  "resolved" "https://registry.npmjs.org/requireindex/-/requireindex-1.2.0.tgz"
+  "version" "1.2.0"
 
 "requireindex@~1.1.0":
   "integrity" "sha512-LBnkqsDE7BZKvqylbmn7lTIVdpx4K/QCduRATpO5R+wtPmky/a8pN1bO2D6wXppn1497AJF9mNjqAXr6bdl9jg=="

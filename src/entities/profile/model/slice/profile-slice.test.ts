@@ -1,7 +1,8 @@
 import { Country } from 'entities/country'
 import { Currency } from 'entities/currency'
-import { ProfileSchema, updateProfileData } from 'entities/profile'
-import { ValidateProfileErrors } from 'entities/profile/model/types/profile'
+
+import { updateProfileData } from '../../model/services/update-profile-data'
+import { ValidateProfileErrors, ProfileSchema } from '../../model/types/profile'
 
 import { profileReducer, profileActions } from './profile-slice'
 

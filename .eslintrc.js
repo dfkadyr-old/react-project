@@ -31,7 +31,8 @@ module.exports = {
     'react',
     'i18next',
     'import',
-    'react-hooks'
+    'react-hooks',
+    'dfkadyr-plugin'
   ],
   rules: {
     '@typescript-eslint/space-before-function-paren': 'off',
@@ -42,7 +43,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'warn',
     '@typescript-eslint/no-floating-promises': 'warn',
     '@typescript-eslint/strict-boolean-expressions': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'warn',
+    '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/naming-convention': 'off',
     'i18next/no-literal-string': [
       'error',
@@ -78,7 +79,8 @@ module.exports = {
     '@typescript-eslint/prefer-nullish-coalescing': 'warn',
     '@typescript-eslint/restrict-template-expressions': 'off',
     'n/no-callback-literal': 'off',
-    '@typescript-eslint/array-type': 'off'
+    '@typescript-eslint/array-type': 'off',
+    'dfkadyr-plugin/path-checker': 'error'
   },
   overrides: [
     {

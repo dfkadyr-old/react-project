@@ -1,9 +1,10 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import { Theme } from 'app/providers/theme-provider'
-import { Article, ArticleView } from 'entities/article'
 import { StoreDecorator } from 'shared/config/storybook/store-decorator'
 import { ThemeDecorator } from 'shared/config/storybook/theme-decorator'
+
+import { Article, ArticleView } from '../../model/types/article'
 
 import { ArticleListItem } from './article-list-item'
 
