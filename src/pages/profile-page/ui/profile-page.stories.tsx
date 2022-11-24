@@ -6,7 +6,7 @@ import { Currency } from 'entities/currency'
 import { StoreDecorator } from 'shared/config/storybook/store-decorator'
 import { ThemeDecorator } from 'shared/config/storybook/theme-decorator'
 
-import { ProfilePage } from '../../profile-page'
+import { ProfilePage } from './profile-page'
 
 export default {
   title: 'pages/ProfilePage',
