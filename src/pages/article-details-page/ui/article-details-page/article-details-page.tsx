@@ -10,6 +10,7 @@ import { classNames } from 'shared/lib/class-names'
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic-module-loader'
 import { useAppDispatch } from 'shared/lib/hooks/use-app-dispatch'
 import { useInitialEffect } from 'shared/lib/hooks/use-initial-effect'
+import { VStack } from 'shared/ui/stack'
 import { Text, TextSize } from 'shared/ui/text'
 import { Page } from 'widgets/page'
 
@@ -63,18 +64,20 @@ export const ArticleDetailsPage = memo((props: ArticleDetailsPageProps) => {
   return (
     <DynamicModuleLoader reducers={reducers}>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-        <ArticleDetailsPageHeader />
-        <ArticleDetails id={id} />
-        <Text size={TextSize.L} className={cls.commentTitle} title={t('Recommendation')} />
-         <ArticleList
-          articles={recommendationArticles}
-          isLoading={recommendationArticlesIsLoading}
-          className={cls.recommendations}
-          target="_blank"
-         />
-        <Text size={TextSize.L} className={cls.commentTitle} title={t('Comments')} />
-        <AddCommentForm onSendComment={onSendComment} />
-        <CommentList isLoading={commentsIsLoading} comments={comments} />
+        <VStack gap={'16'} max>
+          <ArticleDetailsPageHeader />
+          <ArticleDetails id={id} />
+          <Text size={TextSize.L} className={cls.commentTitle} title={t('Recommendation')} />
+             <ArticleList
+              articles={recommendationArticles}
+              isLoading={recommendationArticlesIsLoading}
+              className={cls.recommendations}
+              target="_blank"
+             />
+            <Text size={TextSize.L} className={cls.commentTitle} title={t('Comments')} />
+            <AddCommentForm onSendComment={onSendComment} />
+            <CommentList isLoading={commentsIsLoading} comments={comments} />
+          </VStack>
       </Page>
     </DynamicModuleLoader>
   )

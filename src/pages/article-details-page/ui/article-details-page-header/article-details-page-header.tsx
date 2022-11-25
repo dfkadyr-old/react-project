@@ -7,10 +7,9 @@ import { getArticleDetailsData } from 'entities/article'
 import { RoutePath } from 'shared/config/route-config'
 import { classNames } from 'shared/lib/class-names'
 import { Button } from 'shared/ui/button'
+import { HStack } from 'shared/ui/stack'
 
 import { getCanEditArticle } from '../../model/selectors/article'
-
-import cls from './article-details-page-header.module.scss'
 
 interface ArticleDetailsPageHeaderProps {
   className?: string
@@ -32,15 +31,15 @@ export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderPro
   }, [article?.id, navigate])
 
   return (
-    <div className={classNames(cls.articleDetailsPageHeader, {}, [className])}>
+    <HStack max justify={'spaceBetween'} className={classNames('', {}, [className])}>
       <Button onClick={onBackToList}>
         {t('Go to entities')}
       </Button>
       {isCanEdit && (
-        <Button className={cls.editBtn} onClick={onEditArticle}>
+        <Button onClick={onEditArticle}>
           {t('Edit')}
         </Button>)
       }
-    </div>
+    </HStack>
   )
 })

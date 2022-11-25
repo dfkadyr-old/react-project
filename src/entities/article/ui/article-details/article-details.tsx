@@ -10,6 +10,7 @@ import { useAppDispatch } from 'shared/lib/hooks/use-app-dispatch'
 import { Avatar } from 'shared/ui/avatar'
 import { Icon } from 'shared/ui/icon'
 import { Skeleton } from 'shared/ui/skeleton'
+import { HStack, VStack } from 'shared/ui/stack'
 import { Text, TextAlign, TextSize } from 'shared/ui/text'
 
 import {
@@ -81,19 +82,21 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
   } else {
     content = (
       <>
-        {article?.img && <div className={cls.avatarWrapper}>
+        {article?.img && <HStack justify={'center'} align={'center'} max className={cls.avatarWrapper}>
           <Avatar size={200} src={article.img} className={cls.avatar} />
-        </div>
+        </HStack>
         }
-        <Text title={article?.title} text={article?.subtitle} className={cls.title} size={TextSize.L} />
-        <div className={cls.articleInfo}>
-          <Icon Svg={EyeIcon} className={cls.icon} />
-          <Text text={String(article?.views)}/>
-        </div>
-        <div className={cls.articleInfo}>
-          <Icon Svg={CalendarIcon} className={cls.icon} />
-          <Text text={article?.createdAt}/>
-        </div>
+        <VStack gap={'4'} max>
+          <Text title={article?.title} text={article?.subtitle} className={cls.title} size={TextSize.L} />
+          <HStack gap={'8'}>
+            <Icon Svg={EyeIcon} className={cls.icon} />
+            <Text text={String(article?.views)}/>
+          </HStack>
+          <HStack gap={'8'}>
+            <Icon Svg={CalendarIcon} className={cls.icon} />
+            <Text text={article?.createdAt}/>
+          </HStack>
+        </VStack>
         {article?.blocks.map(renderBlock)}
       </>
     )
@@ -101,9 +104,9 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.ArticleDetails, {}, [className])}>
+      <VStack gap={'16'} className={classNames(cls.ArticleDetails, {}, [className])}>
         {content}
-      </div>
+      </VStack>
     </DynamicModuleLoader>
   )
 })

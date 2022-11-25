@@ -6,6 +6,7 @@ import { classNames, Mods } from 'shared/lib/class-names'
 import { Avatar } from 'shared/ui/avatar'
 import { Input } from 'shared/ui/input'
 import { Spinner } from 'shared/ui/spinner'
+import { HStack, VStack } from 'shared/ui/stack'
 import { Text, TextTheme, TextAlign } from 'shared/ui/text'
 
 import { Profile } from '../../model/types/profile'
@@ -52,27 +53,30 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
   if (isLoading) {
     return (
-      <div className={classNames(cls.profileCard, { [cls.loading]: true }, [className])}>
+      <HStack
+        justify={'center'}
+        align={'center'}
+        className={classNames(cls.profileCard, { [cls.loading]: true }, [className])}
+      >
         <Spinner />
-      </div>
+      </HStack>
     )
   }
 
   if (error) {
     return (
-      <div className={classNames(cls.profileCard, {}, [className, cls.error])}>
+      <HStack justify={'center'} align={'center'} className={classNames(cls.profileCard, {}, [className, cls.error])}>
         <Text theme={TextTheme.ERROR} title={t(error)} text={t('Refresh page')} align={TextAlign.CENTER} />
-      </div>
+      </HStack>
     )
   }
 
   return (
-    <div className={classNames(cls.profileCard, mods, [className])}>
-      <div className={cls.data}>
+    <VStack gap='16' max className={classNames(cls.profileCard, mods, [className])}>
         {data?.avatar && (
-          <div className={cls.avatarWrapper}>
+          <HStack justify={'center'} max align={'center'}>
             <Avatar src={data?.avatar} alt="avatar"/>
-          </div>
+          </HStack>
         )}
         <Input
           value={data?.first}
@@ -128,7 +132,6 @@ export const ProfileCard = (props: ProfileCardProps) => {
           isReadonly={isReadonly}
           onChange={onChangeCountry}
         />
-      </div>
-    </div>
+    </VStack>
   )
 }

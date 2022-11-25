@@ -7,6 +7,7 @@ import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic
 import { useAppDispatch } from 'shared/lib/hooks/use-app-dispatch'
 import { Button } from 'shared/ui/button'
 import { Input } from 'shared/ui/input'
+import { HStack } from 'shared/ui/stack'
 
 import {
   getAddCommentFormIsLoading,
@@ -43,7 +44,12 @@ export const AddCommentForm = memo((props: AddCommentFormProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.addCommentForm, {}, [className])}>
+      <HStack
+        justify={'spaceBetween'}
+        align={'center'}
+        max gap={'8'}
+        className={classNames(cls.addCommentForm, {}, [className])}
+      >
         <Input
           className={cls.input}
           value={text}
@@ -51,7 +57,7 @@ export const AddCommentForm = memo((props: AddCommentFormProps) => {
           onChange={onCommentTextChange}
         />
         <Button onClick={onSendHandler} disabled={isLoading}>{t('Add')}</Button>
-      </div>
+      </HStack>
     </DynamicModuleLoader>
   )
 })
