@@ -6,7 +6,7 @@ import { ThemeDecorator } from 'shared/config/storybook/theme-decorator'
 import { CurrencySelect } from './currency-select'
 
 export default {
-  title: 'entities/CountrySelect',
+  title: 'entities/CurrencySelect',
   component: CurrencySelect,
   argTypes: {
     backgroundColor: { control: 'color' }
