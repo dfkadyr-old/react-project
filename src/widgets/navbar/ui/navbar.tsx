@@ -7,7 +7,9 @@ import { LoginModal } from 'features/auth-by-username'
 import { RoutePath } from 'shared/config/route-config'
 import { classNames } from 'shared/lib/class-names'
 import { AppLink, AppLinkTheme } from 'shared/ui/app-link'
+import { Avatar } from 'shared/ui/avatar'
 import { Button, ButtonTheme } from 'shared/ui/button'
+import { Dropdown } from 'shared/ui/dropdown'
 import { Text, TextTheme } from 'shared/ui/text'
 
 import cls from './navbar.module.scss'
@@ -43,9 +45,20 @@ export const Navbar = memo((props: NavbarProps): JSX.Element => {
         <AppLink to={RoutePath.article_create} theme={AppLinkTheme.SECONDARY}>
           {t('Create article')}
         </AppLink>
-        <Button theme={ButtonTheme.CLEAR_INVERTED} className={cls.links} onClick={onLogout}>
-          {t('Logout')}
-        </Button>
+        <Dropdown
+          direction={'bottom left'}
+          className={cls.dropdown}
+          items={[
+            {
+              content: t('Profile'),
+              href: RoutePath.profile + authData.id
+            },
+            {
+              content: t('Logout'),
+              onClick: onLogout
+            }
+          ]}
+          trigger={<Avatar size={30} src={authData.avatar} />} />
         <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />
       </header>
     )
