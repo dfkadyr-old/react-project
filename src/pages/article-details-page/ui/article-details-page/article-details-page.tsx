@@ -1,27 +1,16 @@
-import { memo, useCallback } from 'react'
+import { memo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 
-import { ArticleDetails, ArticleList } from 'entities/article'
-import { CommentList } from 'entities/comment'
-import { AddCommentForm } from 'features/add-comment-form'
+import { ArticleDetails } from 'entities/article'
+import { ArticleRecommendationsList } from 'features/article-recommendations-list'
 import { classNames } from 'shared/lib/class-names'
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic-module-loader'
-import { useAppDispatch } from 'shared/lib/hooks/use-app-dispatch'
-import { useInitialEffect } from 'shared/lib/hooks/use-initial-effect'
 import { VStack } from 'shared/ui/stack'
-import { Text, TextSize } from 'shared/ui/text'
 import { Page } from 'widgets/page'
 
-import { getArticleCommentsIsLoading } from '../../model/selectors/comments'
-import { getArticleRecommendationsIsLoading } from '../../model/selectors/recommendations'
-import { addCommentForArticle } from '../../model/services/add-comment-for-article'
-import { fetchArticleRecommendations } from '../../model/services/fetch-article-recommendations'
-import { fetchCommentsByArticleId } from '../../model/services/fetch-comments-by-article-id'
 import { articleDetailsPageReducer } from '../../model/slices'
-import { getArticleComments } from '../../model/slices/article-details-comments-slice'
-import { getArticleRecommendations } from '../../model/slices/article-details-page-recommendations-slice'
+import { ArticleDetailsPageComments } from '../article-details-page-comments'
 import { ArticleDetailsPageHeader } from '../article-details-page-header'
 
 import cls from './article-details-page.module.scss'
@@ -36,22 +25,8 @@ const reducers: ReducersList = {
 
 export const ArticleDetailsPage = memo((props: ArticleDetailsPageProps) => {
   const { className } = props
-  const dispatch = useAppDispatch()
   const { t } = useTranslation()
   const { id } = useParams<{ id: string }>()
-  const comments = useSelector(getArticleComments.selectAll)
-  const commentsIsLoading = useSelector(getArticleCommentsIsLoading)
-  const recommendationArticles = useSelector(getArticleRecommendations.selectAll)
-  const recommendationArticlesIsLoading = useSelector(getArticleRecommendationsIsLoading)
-
-  const onSendComment = useCallback((text: string) => {
-    dispatch(addCommentForArticle(text))
-  }, [dispatch])
-
-  useInitialEffect(() => {
-    dispatch(fetchCommentsByArticleId(id))
-    dispatch(fetchArticleRecommendations())
-  })
 
   if (!id) {
     return (
@@ -67,17 +42,9 @@ export const ArticleDetailsPage = memo((props: ArticleDetailsPageProps) => {
         <VStack gap={'16'} max>
           <ArticleDetailsPageHeader />
           <ArticleDetails id={id} />
-          <Text size={TextSize.L} className={cls.commentTitle} title={t('Recommendation')} />
-             <ArticleList
-              articles={recommendationArticles}
-              isLoading={recommendationArticlesIsLoading}
-              className={cls.recommendations}
-              target="_blank"
-             />
-            <Text size={TextSize.L} className={cls.commentTitle} title={t('Comments')} />
-            <AddCommentForm onSendComment={onSendComment} />
-            <CommentList isLoading={commentsIsLoading} comments={comments} />
-          </VStack>
+          <ArticleRecommendationsList />
+          <ArticleDetailsPageComments id={id} />
+        </VStack>
       </Page>
     </DynamicModuleLoader>
   )

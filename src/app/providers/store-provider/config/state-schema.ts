@@ -3,18 +3,20 @@ import { AxiosInstance } from 'axios'
 
 import { ArticleDetailsSchema } from 'entities/article'
 import { CounterSchema } from 'entities/counter'
-import { ProfileSchema } from 'entities/profile'
 import { UserSchema } from 'entities/user'
 import { AddCommentFormSchema } from 'features/add-comment-form'
 import { LoginSchema } from 'features/auth-by-username'
+import { ProfileSchema } from 'features/editable-profile-card'
 import { ArticleDetailsPageSchema } from 'pages/article-details-page'
 import { ArticlesPageSchema } from 'pages/articles-page'
+import { rtkApi } from 'shared/api'
 import { PageSchema } from 'widgets/page'
 
 export interface StateSchema {
   counter: CounterSchema
   user: UserSchema
   page: PageSchema
+  [rtkApi.reducerPath]: ReturnType<typeof rtkApi.reducer>
 
   // Async reducers
   loginForm?: LoginSchema

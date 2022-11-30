@@ -2,7 +2,7 @@ import { Country } from 'entities/country'
 import { Currency } from 'entities/currency'
 import { TestAsyncThunk } from 'shared/lib/tests/test-async-thunk'
 
-import { ValidateProfileErrors } from '../../types/profile'
+import { ValidateProfileErrors } from '../../types/editable-profile-card-schema'
 
 import { updateProfileData } from './update-profile-data'
 

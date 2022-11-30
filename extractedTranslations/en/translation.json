@@ -28,6 +28,7 @@
   "Enter password": "Enter password",
   "Enter username": "Enter username",
   "Entry": "Entry",
+  "Error loading articles": "Error loading articles",
   "Error to get article by id": "",
   "Go to entities": "",
   "Home": "Home",
@@ -49,6 +50,7 @@
   "Modal custom text": "Modal custom text",
   "Not found page": "Not found page",
   "Profile": "Profile",
+  "Profile not found": "",
   "Profile page": "Profile page",
   "Read more": {
     "": {
@@ -79,5 +81,6 @@
   "throw error": "throw error",
   "title": "title",
   "toggle": "toggle",
-  "views": "views"
+  "views": "views",
+  "Ошибка при загрузке статей": ""
 }

@@ -34,7 +34,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
     return <ArticleListItem article={article} view={view} className={cls.card} key={article.id} target={target}/>
   }
 
-  if (!isLoading && articles.length === 0) {
+  if (!isLoading && articles?.length === 0) {
     return (
       <div className={classNames('', {}, [className, cls[view]])}>
         <Text title={t('Article not found')} />
@@ -45,7 +45,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
   return (
     // TODO add virtualized logic
     <div className={classNames('', {}, [className, cls[view]])}>
-      {articles.length > 0 ? articles.map(renderArticle) : null}
+      {articles?.length > 0 ? articles.map(renderArticle) : null}
       {isLoading && getSkeletons(view)}
     </div>
   )

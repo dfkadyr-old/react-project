@@ -2,7 +2,7 @@ import { Country } from 'entities/country'
 import { Currency } from 'entities/currency'
 
 import { updateProfileData } from '../../model/services/update-profile-data'
-import { ValidateProfileErrors, ProfileSchema } from '../../model/types/profile'
+import { ValidateProfileErrors, ProfileSchema } from '../../model/types/editable-profile-card-schema'
 
 import { profileReducer, profileActions } from './profile-slice'
 

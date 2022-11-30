@@ -2,7 +2,7 @@ import { CombinedState, configureStore, Reducer, ReducersMapObject } from '@redu
 
 import { counterReducer } from 'entities/counter'
 import { userReducer } from 'entities/user'
-import { $api } from 'shared/api'
+import { $api, rtkApi } from 'shared/api'
 import { pageReducer } from 'widgets/page'
 
 import { createReducerManager } from './reducer-manager'
@@ -16,7 +16,8 @@ export function createReduxStore(
     ...asyncReducers,
     counter: counterReducer,
     user: userReducer,
-    page: pageReducer
+    page: pageReducer,
+    [rtkApi.reducerPath]: rtkApi.reducer
   }
 
   const reducerManager = createReducerManager(rootReducers)
@@ -33,7 +34,7 @@ export function createReduxStore(
       thunk: {
         extraArgument: extraArg
       }
-    })
+    }).concat(rtkApi.middleware)
   })
 
   // @ts-expect-error

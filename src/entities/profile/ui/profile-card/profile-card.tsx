@@ -57,6 +57,7 @@ export const ProfileCard = (props: ProfileCardProps) => {
         justify={'center'}
         align={'center'}
         className={classNames(cls.profileCard, { [cls.loading]: true }, [className])}
+        max
       >
         <Spinner />
       </HStack>

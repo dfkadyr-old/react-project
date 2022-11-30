@@ -29,6 +29,7 @@
   "Enter password": "Enter password",
   "Enter username": "Enter username",
   "Entry": "Entry",
+  "Error loading articles": "Error loading articles",
   "Error to get article by id": "Error to get article by id",
   "Go to entities": "Go to entities",
   "Home": "Home",
@@ -54,6 +55,7 @@
   "NOT_FOUND_PAGE_TITLE": "NOT_FOUND_PAGE_TITLE",
   "Not found page": "Not found page",
   "Profile": "Profile",
+  "Profile not found": "Profile not found",
   "Profile page": "Profile page",
   "Read more": {
     "": {

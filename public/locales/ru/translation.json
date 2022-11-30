@@ -48,5 +48,7 @@
   "Recommendation": "Recommendation",
   "dfkadyr App": "dfkadyr App",
   "Create article": "Create article",
-  "User profile": "User profile"
+  "User profile": "User profile",
+  "Error loading articles": "Error loading articles",
+  "Profile not found": "Profile not found"
 }

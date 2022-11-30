@@ -1,7 +1,7 @@
 import { Country } from 'entities/country'
 import { Currency } from 'entities/currency'
 
-import { ValidateProfileErrors } from '../../types/profile'
+import { ValidateProfileErrors } from '../../types/editable-profile-card-schema'
 
 import { validateProfileData } from './validate-profile-data'
 
