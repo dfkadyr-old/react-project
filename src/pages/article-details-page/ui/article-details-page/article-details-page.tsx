@@ -1,5 +1,4 @@
 import { memo } from 'react'
-import { useTranslation } from 'react-i18next'
 import { useParams } from 'react-router-dom'
 
 import { ArticleDetails } from 'entities/article'
@@ -25,25 +24,16 @@ const reducers: ReducersList = {
 
 export const ArticleDetailsPage = memo((props: ArticleDetailsPageProps) => {
   const { className } = props
-  const { t } = useTranslation()
   const { id } = useParams<{ id: string }>()
-
-  if (!id) {
-    return (
-      <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-        {t('Article not found')}
-      </Page>
-    )
-  }
 
   return (
     <DynamicModuleLoader reducers={reducers}>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <VStack gap={'16'} max>
           <ArticleDetailsPageHeader />
-          <ArticleDetails id={id} />
+          <ArticleDetails id={id!} />
           <ArticleRecommendationsList />
-          <ArticleDetailsPageComments id={id} />
+          <ArticleDetailsPageComments id={id!} />
         </VStack>
       </Page>
     </DynamicModuleLoader>
