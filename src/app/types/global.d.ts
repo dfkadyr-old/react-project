@@ -22,6 +22,8 @@ type OptionalRecord<K extends keyof any, T> = {
   [P in K]?: T;
 }
 
+type ValueOf<T> = T[keyof T]
+
 declare namespace NodeJS {
   interface ProcessEnv {
     API_URL?: string

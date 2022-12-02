@@ -4,23 +4,26 @@ import { classNames, Mods } from 'shared/lib/class-names'
 
 import cls from './text.module.scss'
 
-export enum TextTheme {
-  PRIMARY = 'primary',
-  INVERTED = 'inverted',
-  ERROR = 'error',
-}
+type TextTheme = ValueOf<typeof TextTheme>
+export const TextTheme = {
+  PRIMARY: 'primary',
+  INVERTED: 'inverted',
+  ERROR: 'error'
+} as const
 
-export enum TextAlign {
-  RIGHT = 'right',
-  LEFT = 'left',
-  CENTER = 'center'
-}
+type TextAlign = ValueOf<typeof TextAlign>
+export const TextAlign = {
+  RIGHT: 'right',
+  LEFT: 'left',
+  CENTER: 'center'
+} as const
 
-export enum TextSize {
-  S = 'size_s',
-  M = 'size_m',
-  L = 'size_l'
-}
+type TextSize = ValueOf<typeof TextSize>
+export const TextSize = {
+  S: 'size_s',
+  M: 'size_m',
+  L: 'size_l'
+} as const
 
 enum TitleTag {
   h1 = 'h1',

@@ -80,6 +80,7 @@ module.exports = {
     '@typescript-eslint/restrict-template-expressions': 'off',
     'n/no-callback-literal': 'off',
     '@typescript-eslint/array-type': 'off',
+    '@typescript-eslint/no-redeclare': 'off',
     'dfkadyr-plugin/path-checker': 'error'
   },
   overrides: [
