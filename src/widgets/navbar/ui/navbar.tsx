@@ -2,7 +2,7 @@ import { memo, useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { getUserAuthData, userActions } from 'entities/user'
+import { getUserAuthData, isUserAdmin, isUserManager, userActions } from 'entities/user'
 import { LoginModal } from 'features/auth-by-username'
 import { RoutePath } from 'shared/config/route-config'
 import { classNames } from 'shared/lib/class-names'
@@ -24,6 +24,8 @@ export const Navbar = memo((props: NavbarProps): JSX.Element => {
   const dispatch = useDispatch()
   const [isAuthModal, setIsAuthModal] = useState(false)
   const authData = useSelector(getUserAuthData)
+  const isAdmin = useSelector(isUserAdmin)
+  const isManager = useSelector(isUserManager)
 
   const onShowModal = useCallback(() => {
     setIsAuthModal(true)
@@ -38,6 +40,8 @@ export const Navbar = memo((props: NavbarProps): JSX.Element => {
     setIsAuthModal(false)
   }, [dispatch])
 
+  const isAdminPanelAvailable = isAdmin || isManager
+
   if (authData) {
     return (
       <header className={classNames(cls.navbar, {}, [className])}>
@@ -49,6 +53,12 @@ export const Navbar = memo((props: NavbarProps): JSX.Element => {
           direction={'bottom left'}
           className={cls.dropdown}
           items={[
+            ...(isAdminPanelAvailable
+              ? [{
+                  content: t('Admin'),
+                  href: RoutePath.admin_panel
+                }]
+              : []),
             {
               content: t('Profile'),
               href: RoutePath.profile + authData.id
