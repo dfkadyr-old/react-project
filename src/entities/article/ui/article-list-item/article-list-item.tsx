@@ -11,7 +11,8 @@ import { Card } from 'shared/ui/card'
 import { Icon } from 'shared/ui/icon'
 import { Text } from 'shared/ui/text'
 
-import { Article, ArticleBlockType, ArticleTextBlockTypes, ArticleView } from '../../model/types/article'
+import { ArticleView } from '../../model/consts'
+import { Article, ArticleBlockType, ArticleTextBlockTypes } from '../../model/types/article'
 import { ArticleTextBlock } from '../article-text-block'
 
 import cls from './article-list-item.module.scss'

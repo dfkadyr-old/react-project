@@ -4,7 +4,8 @@ import { useTranslation } from 'react-i18next'
 import { classNames } from 'shared/lib/class-names'
 import { Text } from 'shared/ui/text'
 
-import { Article, ArticleView } from '../../model/types/article'
+import { ArticleView } from '../../model/consts'
+import { Article } from '../../model/types/article'
 import { ArticleListItem } from '../article-list-item'
 import { ArticleListItemSkeleton } from '../article-list-item/article-list-item-skeleton'
 

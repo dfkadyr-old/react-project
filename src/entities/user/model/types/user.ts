@@ -1,9 +1,4 @@
-export type UserRole = ValueOf<typeof UserRole>
-export const UserRole = {
-  ADMIN: 'ADMIN',
-  USER: 'USER',
-  MANAGER: 'MANAGER'
-} as const
+import { UserRole } from '../const'
 
 export interface User {
   id: string

@@ -6,7 +6,7 @@ import { classNames } from 'shared/lib/class-names'
 import { Button, ButtonTheme } from 'shared/ui/button'
 import { Icon } from 'shared/ui/icon'
 
-import { ArticleView } from '../../model/types/article'
+import { ArticleView } from '../../model/consts'
 
 import cls from './article-view-selector.module.scss'
 

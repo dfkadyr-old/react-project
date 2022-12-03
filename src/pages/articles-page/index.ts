@@ -1,2 +1,2 @@
 export { ArticlesPage } from './ui/articles-page'
-export { ArticlesPageSchema } from './model/types/article-page-schema'
+export type { ArticlesPageSchema } from './model/types/article-page-schema'

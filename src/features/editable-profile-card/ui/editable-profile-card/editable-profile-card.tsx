@@ -12,6 +12,7 @@ import { useInitialEffect } from 'shared/lib/hooks/use-initial-effect'
 import { VStack } from 'shared/ui/stack'
 import { Text, TextTheme } from 'shared/ui/text'
 
+import { ValidateProfileErrors } from '../../model/consts'
 import { getProfileError } from '../../model/selectors/get-profile-error'
 import { getProfileForm } from '../../model/selectors/get-profile-form'
 import { getProfileIsLoading } from '../../model/selectors/get-profile-is-loading'
@@ -19,7 +20,6 @@ import { getProfileReadonly } from '../../model/selectors/get-profile-readonly'
 import { getProfileValidateErrors } from '../../model/selectors/get-profile-validate-errors'
 import { fetchProfileData } from '../../model/services/fetch-profile-data'
 import { profileActions, profileReducer } from '../../model/slice/profile-slice'
-import { ValidateProfileErrors } from '../../model/types/editable-profile-card-schema'
 import { EditableProfileCardHeader } from '../editable-profile-card-header'
 
 interface EditableProfileCardProps {

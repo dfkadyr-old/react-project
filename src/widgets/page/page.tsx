@@ -7,7 +7,7 @@ import { classNames } from 'shared/lib/class-names'
 import { useAppDispatch } from 'shared/lib/hooks/use-app-dispatch'
 import { useInfiniteScroll } from 'shared/lib/hooks/use-infinite-scroll'
 import { useInitialEffect } from 'shared/lib/hooks/use-initial-effect'
-import { useThrottle } from 'shared/lib/hooks/use-throttle/use-throttle'
+import { useThrottle } from 'shared/lib/hooks/use-throttle'
 
 import { getPageScrollByPath } from './model/selectors/page'
 import { pageActions } from './model/slices/page-slice'
