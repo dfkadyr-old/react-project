@@ -1,4 +1,5 @@
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin'
+import CircularDependencyPlugin from 'circular-dependency-plugin'
 // eslint-disable-next-line import/default
 import CopyPlugin from 'copy-webpack-plugin'
 import Dotenv from 'dotenv-webpack'
@@ -29,6 +30,10 @@ export function buildPlugins(props: BuildOptions): webpack.WebpackPluginInstance
       patterns: [
         { from: paths.locales, to: paths.buildLocales }
       ]
+    }),
+    new CircularDependencyPlugin({
+      exclude: /node_modules/,
+      failOnError: true
     }),
     new Dotenv()
   ]
