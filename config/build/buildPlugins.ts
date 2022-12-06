@@ -3,6 +3,7 @@ import CircularDependencyPlugin from 'circular-dependency-plugin'
 // eslint-disable-next-line import/default
 import CopyPlugin from 'copy-webpack-plugin'
 import Dotenv from 'dotenv-webpack'
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 import HTMLWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import webpack from 'webpack'
@@ -34,6 +35,14 @@ export function buildPlugins(props: BuildOptions): webpack.WebpackPluginInstance
     new CircularDependencyPlugin({
       exclude: /node_modules/,
       failOnError: true
+    }),
+    new ForkTsCheckerWebpackPlugin({
+      typescript: {
+        diagnosticOptions: {
+          semantic: true,
+          syntactic: true
+        }
+      }
     }),
     new Dotenv()
   ]
