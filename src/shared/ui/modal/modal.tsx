@@ -1,8 +1,10 @@
-import React, { MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState } from 'react'
+import { MutableRefObject, ReactNode, useCallback, useEffect, useRef, useState } from 'react'
 
 import { classNames, Mods } from 'shared/lib/class-names'
 
+import { Overlay } from '../overlay'
 import { Portal } from '../portal'
+import { VStack } from '../stack'
 
 import cls from './modal.module.scss'
 
@@ -32,10 +34,6 @@ export const Modal = (props: ModalProps) => {
   const mods: Mods = {
     [cls.opened]: isOpen,
     [cls.isClosing]: isClosing
-  }
-
-  const onContentClick = (e: React.MouseEvent) => {
-    e.stopPropagation()
   }
 
   const closeHandler = useCallback(() => {
@@ -77,16 +75,14 @@ export const Modal = (props: ModalProps) => {
 
   return (
     <Portal>
-      <div className={classNames(cls.modal, mods, [className])}>
-        <div className={cls.overlay} onClick={closeHandler}>
-          <div
-            className={cls.content}
-            onClick={onContentClick}
-          >
-            {children}
-          </div>
+      <VStack justify={'center'} align={'center'} className={classNames(cls.modal, mods, [className])}>
+        <Overlay onClick={closeHandler} />
+        <div
+          className={cls.content}
+        >
+          {children}
         </div>
-      </div>
+      </VStack>
     </Portal>
   )
 }
