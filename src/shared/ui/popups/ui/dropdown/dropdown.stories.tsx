@@ -3,12 +3,12 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import { Theme } from 'app/providers/theme-provider'
 import { ThemeDecorator } from 'shared/config/storybook/theme-decorator'
 
-import { Button } from '../button'
+import { Button } from '../../../button'
 
 import { Dropdown } from './dropdown'
 
 export default {
-  title: 'shared/Dropdown',
+  title: 'shared/popups/Dropdown',
   component: Dropdown,
   argTypes: {
     backgroundColor: { control: 'color' }

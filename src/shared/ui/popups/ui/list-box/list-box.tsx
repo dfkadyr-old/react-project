@@ -2,9 +2,12 @@ import { Listbox as HListbox } from '@headlessui/react'
 import { Fragment, memo, ReactNode } from 'react'
 
 import { classNames } from 'shared/lib/class-names'
+import { DropdownDirection } from 'shared/types/ui'
 
-import { Button } from '../button'
-import { HStack } from '../stack'
+import { Button } from '../../../button'
+import { HStack } from '../../../stack'
+import { mapDirectionClass } from '../../styles/consts'
+import popupCls from '../../styles/popup.module.scss'
 
 import cls from './list-box.module.scss'
 
@@ -13,8 +16,6 @@ interface Option {
   label: ReactNode
   disabled?: boolean
 }
-
-type DropdownDirection = 'top' | 'bottom'
 
 interface ListBoxProps {
   options?: Option[]
@@ -27,13 +28,8 @@ interface ListBoxProps {
   direction?: DropdownDirection
 }
 
-const mapDirectionClass: Record<DropdownDirection, string> = {
-  bottom: cls.optionsBottom,
-  top: cls.optionsTop
-}
-
 export const ListBox = memo((props: ListBoxProps) => {
-  const { className, options, value, defaultValue, readonly, onChange, label, direction = 'bottom' } = props
+  const { className, options, value, defaultValue, readonly, onChange, label, direction = 'bottom right' } = props
   const optionsClasses = [mapDirectionClass[direction]]
 
   return (
@@ -42,7 +38,7 @@ export const ListBox = memo((props: ListBoxProps) => {
       <HListbox
         disabled={readonly}
         as={'div'}
-        className={classNames(cls.ListBox, {}, [className])}
+        className={classNames(cls.ListBox, {}, [className, popupCls.popup])}
         value={value}
         onChange={onChange}
       >
@@ -60,7 +56,11 @@ export const ListBox = memo((props: ListBoxProps) => {
               disabled={option.disabled}
             >
               {({ active, selected }) => (
-                <li className={classNames(cls.item, { [cls.active]: active, [cls.disabled]: option.disabled }, [])}>
+                <li
+                  className={classNames(cls.item,
+                    { [popupCls.active]: active, [popupCls.disabled]: option.disabled },
+                    [])}
+                >
                   {selected && '!!!'}
                   {option.label}
                 </li>

@@ -6,7 +6,7 @@ import { ThemeDecorator } from 'shared/config/storybook/theme-decorator'
 import { ListBox } from './list-box'
 
 export default {
-  title: 'shared/ListBox',
+  title: 'shared/popups/ListBox',
   component: ListBox,
   argTypes: {
     backgroundColor: { control: 'color' }
