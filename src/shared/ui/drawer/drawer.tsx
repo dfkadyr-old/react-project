@@ -1,6 +1,7 @@
 import { ReactNode } from 'react'
 
 import { classNames, Mods } from 'shared/lib/class-names'
+import { useModal } from 'shared/lib/hooks/use-modal'
 
 import { Overlay } from '../overlay'
 import { Portal } from '../portal'
@@ -13,6 +14,7 @@ interface DrawerProps {
   children: ReactNode
   isOpen?: boolean
   onClose?: () => void
+  lazy?: boolean
 }
 
 export const Drawer = (props: DrawerProps) => {
@@ -20,17 +22,33 @@ export const Drawer = (props: DrawerProps) => {
     className,
     children,
     onClose,
-    isOpen
+    isOpen,
+    lazy
   } = props
 
+  const {
+    close,
+    isClosing,
+    isMounted
+  } = useModal({
+    animationDelay: 300,
+    onClose,
+    isOpen
+  })
+
   const mods: Mods = {
-    [cls.opened]: isOpen
+    [cls.opened]: isOpen,
+    [cls.isClosing]: isClosing
+  }
+
+  if (lazy && !isMounted) {
+    return null
   }
 
   return (
     <Portal>
       <VStack justify={'end'} className={classNames(cls.drawer, mods, [className])}>
-        <Overlay onClick={onClose} />
+        <Overlay onClick={close} />
         <div
           className={cls.content}
         >
