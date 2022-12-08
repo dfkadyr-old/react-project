@@ -13,7 +13,7 @@
     "allowJs": true,
     "strict": true,
     "moduleResolution": "node",
-    // Для абсолютного импортаxw
+    // Для абсолютного импорта
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
