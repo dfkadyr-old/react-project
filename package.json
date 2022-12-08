@@ -105,7 +105,9 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.4",
+    "@react-spring/web": "^9.5.5",
     "@reduxjs/toolkit": "^1.8.5",
+    "@use-gesture/react": "^10.2.22",
     "axios": "^0.26.1",
     "concurrently": "^7.5.0",
     "i18next": "^21.9.0",

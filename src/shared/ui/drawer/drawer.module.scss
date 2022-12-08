@@ -4,38 +4,19 @@
   bottom: 0;
   right: 0;
   left: 0;
-  pointer-events: none;
-  opacity: 0;
-  z-index: var(--negative-z-index);
+  z-index: var(--select-z-index);
 }
 
-.content {
-  position: relative;
-  bottom: 0;
-  height: 70%;
-  width: 100%;
-  min-height: 100px;
-  padding: 20px;
+.sheet {
+  position: fixed;
+  left: 2vw;
+  height: calc(100vh + 100px);
+  width: 96vw;
+  padding: 15px;
+  border-radius: 12px 12px 0;
   background: var(--bg-color);
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  transition: 0.3s transform;
-  transform: translateY(100%);
-  overflow-y: auto;
-  overflow-x: hidden;
-  z-index: var(--select-z-index);
-
-  &::before {
-    content: "";
-    position: relative;
-    bottom: 40px;
-    display: block;
-    width: 100px;
-    height: 10px;
-    margin: auto;
-    background: var(--bg-color);
-    border-radius: 12px;
-  }
+  z-index: var(--modal-z-index);
+  touch-action: none;
 }
 
 .opened {
@@ -45,11 +26,5 @@
 
   .content {
     transform: translateY(0%);
-  }
-}
-
-.is-closing {
-  .content {
-    transform: translateY(100%);
   }
 }

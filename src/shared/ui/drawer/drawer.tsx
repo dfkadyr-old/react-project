@@ -1,7 +1,7 @@
-import { ReactNode } from 'react'
+import { memo, ReactNode, useCallback, useEffect } from 'react'
 
-import { classNames, Mods } from 'shared/lib/class-names'
-import { useModal } from 'shared/lib/hooks/use-modal'
+import { classNames } from 'shared/lib/class-names'
+import { useAnimationLibs } from 'shared/lib/components/animation-provider'
 
 import { Overlay } from '../overlay'
 import { Portal } from '../portal'
@@ -17,44 +17,90 @@ interface DrawerProps {
   lazy?: boolean
 }
 
-export const Drawer = (props: DrawerProps) => {
+const height = window.innerHeight - 100
+
+const DrawerContent = (props: DrawerProps) => {
   const {
     className,
     children,
     onClose,
-    isOpen,
-    lazy
-  } = props
-
-  const {
-    close,
-    isClosing,
-    isMounted
-  } = useModal({
-    animationDelay: 300,
-    onClose,
     isOpen
-  })
+  } = props
+  const { Spring, Gesture } = useAnimationLibs()
+  const [{ y }, api] = Spring.useSpring(() => ({ y: height }))
 
-  const mods: Mods = {
-    [cls.opened]: isOpen,
-    [cls.isClosing]: isClosing
+  const openDrawer = useCallback(() => {
+    api.start({ y: 0, immediate: false })
+  }, [api])
+
+  const close = (velocity = 0) => {
+    api.start({
+      y: height,
+      immediate: false,
+      config: { ...Spring.config.stiff, velocity },
+      onResolve: onClose
+    })
   }
 
-  if (lazy && !isMounted) {
+  const bind = Gesture.useDrag(
+    ({
+      last,
+      velocity: [, vy],
+      direction: [, dy],
+      movement: [, my],
+      cancel
+    }) => {
+      if (my < -70) cancel()
+
+      if (last) {
+        if (my > height * 0.5 || (vy > 0.5 && dy > 0)) {
+          close()
+        } else {
+          openDrawer()
+        }
+      } else {
+        api.start({ y: my, immediate: true })
+      }
+    },
+    {
+      from: () => [0, y.get()], filterTaps: true, bounds: { top: 0 }, rubberband: true
+    }
+  )
+
+  const display = y.to((py) => (py < height ? 'block' : 'none'))
+
+  useEffect(() => {
+    if (isOpen) {
+      openDrawer()
+    }
+  }, [api, isOpen, openDrawer])
+
+  if (!isOpen) {
     return null
   }
 
   return (
     <Portal>
-      <VStack justify={'end'} className={classNames(cls.drawer, mods, [className])}>
+      <VStack justify={'end'} className={classNames(cls.drawer, {}, [className])}>
         <Overlay onClick={close} />
-        <div
-          className={cls.content}
+        <Spring.a.div
+          className={cls.sheet}
+          style={{ display, bottom: `calc(-100vh + ${height - 100}px)`, y }}
+          {...bind()}
         >
           {children}
-        </div>
+        </Spring.a.div>
       </VStack>
     </Portal>
   )
 }
+
+export const Drawer = memo((props: DrawerProps) => {
+  const { isLoaded } = useAnimationLibs()
+
+  if (!isLoaded) {
+    return null
+  }
+
+  return <DrawerContent {...props} />
+})
