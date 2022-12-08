@@ -1,7 +1,7 @@
 import { Suspense } from 'react'
 
-import { Modal } from 'shared/ui/modal'
-import { Spinner } from 'shared/ui/spinner'
+import { Modal } from '@/shared/ui/modal'
+import { Spinner } from '@/shared/ui/spinner'
 
 import { LoginForm } from '../login-form'
 

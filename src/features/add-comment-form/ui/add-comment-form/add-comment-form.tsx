@@ -2,12 +2,12 @@ import { memo, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 
-import { classNames } from 'shared/lib/class-names'
-import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic-module-loader'
-import { useAppDispatch } from 'shared/lib/hooks/use-app-dispatch'
-import { Button } from 'shared/ui/button'
-import { Input } from 'shared/ui/input'
-import { HStack } from 'shared/ui/stack'
+import { classNames } from '@/shared/lib/class-names'
+import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/dynamic-module-loader'
+import { useAppDispatch } from '@/shared/lib/hooks/use-app-dispatch'
+import { Button } from '@/shared/ui/button'
+import { Input } from '@/shared/ui/input'
+import { HStack } from '@/shared/ui/stack'
 
 import {
   getAddCommentFormIsLoading,

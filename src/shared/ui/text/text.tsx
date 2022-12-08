@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-import { classNames, Mods } from 'shared/lib/class-names'
+import { classNames, Mods } from '@/shared/lib/class-names'
 
 import cls from './text.module.scss'
 

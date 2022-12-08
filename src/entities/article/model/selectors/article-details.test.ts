@@ -1,4 +1,4 @@
-import { StateSchema } from 'app/providers/store-provider'
+import { StateSchema } from '@/app/providers/store-provider'
 
 import { getArticleDetailsData, getArticleDetailsError, getArticleDetailsIsLoading } from './article-details'
 

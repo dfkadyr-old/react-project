@@ -1,8 +1,8 @@
 import { memo } from 'react'
 
-import { classNames } from 'shared/lib/class-names'
-import { Card } from 'shared/ui/card'
-import { Skeleton } from 'shared/ui/skeleton'
+import { classNames } from '@/shared/lib/class-names'
+import { Card } from '@/shared/ui/card'
+import { Skeleton } from '@/shared/ui/skeleton'
 
 import { ArticleView } from '../../model/consts'
 

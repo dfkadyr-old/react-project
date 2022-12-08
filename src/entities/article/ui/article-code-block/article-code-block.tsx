@@ -1,7 +1,7 @@
 import { memo } from 'react'
 
-import { classNames } from 'shared/lib/class-names'
-import { Code } from 'shared/ui/code'
+import { classNames } from '@/shared/lib/class-names'
+import { Code } from '@/shared/ui/code'
 
 import { ArticleCodeBlockTypes } from '../../model/types/article'
 

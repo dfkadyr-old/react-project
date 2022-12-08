@@ -1,6 +1,6 @@
 import { HTMLAttributes, ReactNode } from 'react'
 
-import { classNames } from 'shared/lib/class-names'
+import { classNames } from '@/shared/lib/class-names'
 
 import cls from './card.module.scss'
 

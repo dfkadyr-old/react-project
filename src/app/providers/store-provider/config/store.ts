@@ -1,9 +1,9 @@
 import { CombinedState, configureStore, Reducer, ReducersMapObject } from '@reduxjs/toolkit'
 
-import { counterReducer } from 'entities/counter'
-import { userReducer } from 'entities/user'
-import { $api, rtkApi } from 'shared/api'
-import { pageReducer } from 'widgets/page'
+import { counterReducer } from '@/entities/counter'
+import { userReducer } from '@/entities/user'
+import { $api, rtkApi } from '@/shared/api'
+import { pageReducer } from '@/widgets/page'
 
 import { createReducerManager } from './reducer-manager'
 import { StateSchema, ThunkExtraArg } from './state-schema'

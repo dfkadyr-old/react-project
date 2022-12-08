@@ -3,8 +3,8 @@ import {
   createSlice, PayloadAction
 } from '@reduxjs/toolkit'
 
-import { StateSchema } from 'app/providers/store-provider'
-import { CommentProps } from 'entities/comment'
+import { StateSchema } from '@/app/providers/store-provider'
+import { CommentProps } from '@/entities/comment'
 
 import { fetchCommentsByArticleId } from '../../model/services/fetch-comments-by-article-id'
 import { ArticleDetailsCommentsSchema } from '../types/article-details-comments-schema'

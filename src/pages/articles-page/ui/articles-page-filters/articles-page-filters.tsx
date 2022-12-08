@@ -4,13 +4,13 @@ import { useSelector } from 'react-redux'
 
 import {
   ArticleSortField, ArticleSortSelector, ArticleType, ArticleView, ArticleViewSelector, ArticleTypeTabs
-} from 'entities/article'
-import { classNames } from 'shared/lib/class-names'
-import { useAppDispatch } from 'shared/lib/hooks/use-app-dispatch'
-import { useDebounce } from 'shared/lib/hooks/use-debounce'
-import { SortOrder } from 'shared/types'
-import { Card } from 'shared/ui/card'
-import { Input } from 'shared/ui/input'
+} from '@/entities/article'
+import { classNames } from '@/shared/lib/class-names'
+import { useAppDispatch } from '@/shared/lib/hooks/use-app-dispatch'
+import { useDebounce } from '@/shared/lib/hooks/use-debounce'
+import { SortOrder } from '@/shared/types'
+import { Card } from '@/shared/ui/card'
+import { Input } from '@/shared/ui/input'
 
 import {
   getArticlesPageOrder, getArticlesPageSearch,

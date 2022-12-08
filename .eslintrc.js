@@ -63,6 +63,13 @@ module.exports = {
           order: 'asc'
         },
         'newlines-between': 'always',
+        pathGroups: [
+          {
+            pattern: '@/**',
+            group: 'internal',
+            position: 'after'
+          }
+        ],
         groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index']
       }
     ],
@@ -81,7 +88,8 @@ module.exports = {
     'n/no-callback-literal': 'off',
     '@typescript-eslint/array-type': 'off',
     '@typescript-eslint/no-redeclare': 'off',
-    'dfkadyr-plugin/path-checker': 'error'
+    'dfkadyr-plugin/path-checker': 'error',
+    'import/no-unresolved': 'off'
   },
   overrides: [
     {

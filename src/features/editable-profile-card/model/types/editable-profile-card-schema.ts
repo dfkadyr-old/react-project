@@ -1,4 +1,4 @@
-import { Profile } from 'entities/profile'
+import { Profile } from '@/entities/profile'
 
 import { ValidateProfileErrors } from '../consts'
 

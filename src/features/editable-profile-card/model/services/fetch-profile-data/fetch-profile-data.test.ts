@@ -1,6 +1,6 @@
-import { Country } from 'entities/country'
-import { Currency } from 'entities/currency'
-import { TestAsyncThunk } from 'shared/lib/tests/test-async-thunk'
+import { Country } from '@/entities/country'
+import { Currency } from '@/entities/currency'
+import { TestAsyncThunk } from '@/shared/lib/tests/test-async-thunk'
 
 import { fetchProfileData } from './fetch-profile-data'
 

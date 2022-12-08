@@ -1,13 +1,13 @@
 import { useTranslation } from 'react-i18next'
 
-import { Country, CountrySelect } from 'entities/country'
-import { Currency, CurrencySelect } from 'entities/currency'
-import { classNames, Mods } from 'shared/lib/class-names'
-import { Avatar } from 'shared/ui/avatar'
-import { Input } from 'shared/ui/input'
-import { Spinner } from 'shared/ui/spinner'
-import { HStack, VStack } from 'shared/ui/stack'
-import { Text, TextTheme, TextAlign } from 'shared/ui/text'
+import { Country, CountrySelect } from '@/entities/country'
+import { Currency, CurrencySelect } from '@/entities/currency'
+import { classNames, Mods } from '@/shared/lib/class-names'
+import { Avatar } from '@/shared/ui/avatar'
+import { Input } from '@/shared/ui/input'
+import { Spinner } from '@/shared/ui/spinner'
+import { HStack, VStack } from '@/shared/ui/stack'
+import { Text, TextTheme, TextAlign } from '@/shared/ui/text'
 
 import { Profile } from '../../model/types/profile'
 

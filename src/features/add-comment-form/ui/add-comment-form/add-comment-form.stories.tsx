@@ -1,9 +1,9 @@
 import { action } from '@storybook/addon-actions'
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import { Theme } from 'app/providers/theme-provider'
-import { StoreDecorator } from 'shared/config/storybook/store-decorator'
-import { ThemeDecorator } from 'shared/config/storybook/theme-decorator'
+import { Theme } from '@/app/providers/theme-provider'
+import { StoreDecorator } from '@/shared/config/storybook/store-decorator'
+import { ThemeDecorator } from '@/shared/config/storybook/theme-decorator'
 
 import { AddCommentForm } from './add-comment-form'
 

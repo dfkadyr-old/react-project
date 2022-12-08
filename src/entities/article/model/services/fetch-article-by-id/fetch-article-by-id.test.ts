@@ -1,4 +1,4 @@
-import { TestAsyncThunk } from 'shared/lib/tests/test-async-thunk'
+import { TestAsyncThunk } from '@/shared/lib/tests/test-async-thunk'
 
 import { ArticleBlockType, ArticleType } from '../../types/article'
 

@@ -1,7 +1,7 @@
 import { memo } from 'react'
 
-import { classNames } from 'shared/lib/class-names'
-import { Spinner } from 'shared/ui/spinner'
+import { classNames } from '@/shared/lib/class-names'
+import { Spinner } from '@/shared/ui/spinner'
 
 import cls from './page-loader.module.scss'
 

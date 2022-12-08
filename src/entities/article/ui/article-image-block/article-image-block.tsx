@@ -1,7 +1,7 @@
 import { memo } from 'react'
 
-import { classNames } from 'shared/lib/class-names'
-import { Text, TextAlign } from 'shared/ui/text'
+import { classNames } from '@/shared/lib/class-names'
+import { Text, TextAlign } from '@/shared/ui/text'
 
 import { ArticleImageBlockTypes } from '../../model/types/article'
 

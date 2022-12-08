@@ -1,12 +1,12 @@
 import { memo } from 'react'
 import { useParams } from 'react-router-dom'
 
-import { ArticleDetails } from 'entities/article'
-import { ArticleRecommendationsList } from 'features/article-recommendations-list'
-import { classNames } from 'shared/lib/class-names'
-import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/dynamic-module-loader'
-import { VStack } from 'shared/ui/stack'
-import { Page } from 'widgets/page'
+import { ArticleDetails } from '@/entities/article'
+import { ArticleRecommendationsList } from '@/features/article-recommendations-list'
+import { classNames } from '@/shared/lib/class-names'
+import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/dynamic-module-loader'
+import { VStack } from '@/shared/ui/stack'
+import { Page } from '@/widgets/page'
 
 import { articleDetailsPageReducer } from '../../model/slices'
 import { ArticleDetailsPageComments } from '../article-details-page-comments'
