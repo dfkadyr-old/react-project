@@ -13,6 +13,7 @@
   "Articles Page": "Articles Page",
   "Authorization Form": "",
   "Cancel": "Cancel",
+  "Close": "Close",
   "Comment": "Comment",
   "Comments": "Comments",
   "Comments not found": "",
@@ -40,6 +41,7 @@
   "Incorrect username or password": "Incorrect username or password",
   "It": "It",
   "Language": "Language",
+  "Leave your feedback about the article, it will help improve the quality": "Leave your feedback about the article, it will help improve the quality",
   "Login": "Login",
   "Logout": "Logout",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
@@ -55,6 +57,7 @@
   "Profile": "Profile",
   "Profile not found": "",
   "Profile page": "Profile page",
+  "Rate the article": "Rate the article",
   "Read more": {
     "": {
       "": {
@@ -68,11 +71,14 @@
   "Save": "Save",
   "Science": "Science",
   "Search": "",
+  "Send": "Send",
   "Server Error": "Server Error",
   "Something went wrong": "Something went wrong",
   "Sort": "",
   "Sort by": "",
+  "Thank you for rating!": "Thank you for rating!",
   "User profile": "User profile",
+  "Your feedback": "Your feedback",
   "ascending": "",
   "by": "",
   "date of creation": "date of creation",
@@ -85,5 +91,9 @@
   "title": "title",
   "toggle": "toggle",
   "views": "views",
-  "Ошибка при загрузке статей": ""
+  "Ваш отзыв": "",
+  "Закрыть": "",
+  "Отправить": "",
+  "Ошибка при загрузке статей": "",
+  "Спасибо за оценку!": "Спасибо за оценку!"
 }

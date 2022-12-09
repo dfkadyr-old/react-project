@@ -1,0 +1,15 @@
+.star-icon {
+  cursor: pointer;
+}
+
+.normal {
+  fill: none;
+}
+
+.hovered {
+  fill: var(--primary-color);
+}
+
+.selected {
+  cursor: auto;
+}

@@ -2,6 +2,7 @@ import { memo } from 'react'
 import { useParams } from 'react-router-dom'
 
 import { ArticleDetails } from '@/entities/article'
+import { ArticleRating } from '@/features/article-rating'
 import { ArticleRecommendationsList } from '@/features/article-recommendations-list'
 import { classNames } from '@/shared/lib/class-names'
 import { DynamicModuleLoader, ReducersList } from '@/shared/lib/components/dynamic-module-loader'
@@ -26,14 +27,19 @@ export const ArticleDetailsPage = memo((props: ArticleDetailsPageProps) => {
   const { className } = props
   const { id } = useParams<{ id: string }>()
 
+  if (!id) {
+    return null
+  }
+
   return (
     <DynamicModuleLoader reducers={reducers}>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <VStack gap={'16'} max>
           <ArticleDetailsPageHeader />
-          <ArticleDetails id={id!} />
+          <ArticleDetails id={id} />
+          <ArticleRating articleId={id} />
           <ArticleRecommendationsList />
-          <ArticleDetailsPageComments id={id!} />
+          <ArticleDetailsPageComments id={id} />
         </VStack>
       </Page>
     </DynamicModuleLoader>
