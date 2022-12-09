@@ -6,12 +6,15 @@
   "Add": "Add",
   "Add country": "Add country",
   "Add currency": "Add currency",
+  "Admin": "Admin",
+  "AdminPanelPage page": "AdminPanelPage page",
   "All article": "All article",
   "Article Details": "Article Details",
   "Article not found": "Article not found",
   "Articles Page": "Articles Page",
   "Authorization Form": "Authorization Form",
   "Cancel": "Cancel",
+  "Close": "Close",
   "Comment": "Comment",
   "Comments": "Comments",
   "Comments not found": "Comments not found",
@@ -29,7 +32,9 @@
   "Enter password": "Enter password",
   "Enter username": "Enter username",
   "Entry": "Entry",
+  "Error loading articles": "Error loading articles",
   "Error to get article by id": "Error to get article by id",
+  "ForbiddenPage page": "ForbiddenPage page",
   "Go to entities": "Go to entities",
   "Home": "Home",
   "Incorrect age": "Incorrect age",
@@ -38,6 +43,7 @@
   "It": "It",
   "LANGUAGE_TITLE": "LANGUAGE_TITLE",
   "Language": "Language",
+  "Leave your feedback about the article, it will help improve the quality": "Leave your feedback about the article, it will help improve the quality",
   "Login": "Login",
   "Logout": "Logout",
   "Lorem ipsum dolor sit amet, consectetur adipisicing elit": {
@@ -54,7 +60,9 @@
   "NOT_FOUND_PAGE_TITLE": "NOT_FOUND_PAGE_TITLE",
   "Not found page": "Not found page",
   "Profile": "Profile",
+  "Profile not found": "Profile not found",
   "Profile page": "Profile page",
+  "Rate the article": "Rate the article",
   "Read more": {
     "": {
       "": {
@@ -68,10 +76,13 @@
   "Save": "Save",
   "Science": "Science",
   "Search": "Search",
+  "Send": "Send",
   "Server Error": "Server Error",
   "Something went wrong": "Something went wrong",
   "Sort by": "Sort by",
+  "Thank you for rating!": "Thank you for rating!",
   "User profile": "User profile",
+  "Your feedback": "Your feedback",
   "ascending": "ascending",
   "by": "by",
   "date of creation": "date of creation",
@@ -82,5 +93,6 @@
   "throw error": "throw error",
   "title": "title",
   "toggle": "toggle",
-  "views": "views"
+  "views": "views",
+  "Спасибо за оценку!": "Спасибо за оценку!"
 }
