@@ -33,5 +33,5 @@ export function useTheme(): UseThemeResult {
     document.body.className = theme ?? ''
   }, [theme])
 
-  return { theme: Theme.LIGHT, toggleTheme }
+  return { theme: theme || Theme.LIGHT, toggleTheme }
 }

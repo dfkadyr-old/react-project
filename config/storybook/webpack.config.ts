@@ -4,7 +4,7 @@ import webpack, { DefinePlugin, RuleSetRule } from 'webpack'
 
 import { buildCssLoader } from '../build/loaders/buildCssLoader'
 import { buildFileLoader } from '../build/loaders/buildFileLoader'
-import { buildSvgLoader } from '../build/loaders/buildSvgLoader'
+import { buildSvgIconLoader, buildSvgLoader } from '../build/loaders/buildSvgLoader'
 import { BuildPaths, Project } from '../build/types/config'
 
 export default ({ config }: { config: webpack.Configuration }) => {
@@ -30,7 +30,9 @@ export default ({ config }: { config: webpack.Configuration }) => {
     return rule
   })
 
-  config.module!.rules.push(buildSvgLoader())
+  config.module!.rules.push(buildSvgIconLoader(paths))
+
+  config.module!.rules.push(buildSvgLoader(paths))
 
   config.module!.rules.push(buildFileLoader())
 
