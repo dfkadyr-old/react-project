@@ -69,7 +69,7 @@
     "dotenv-webpack": "^8.0.1",
     "eslint": "^8.24.0",
     "eslint-config-standard-with-typescript": "^23.0.0",
-    "eslint-plugin-dfkadyr-plugin": "^0.0.2",
+    "eslint-plugin-dfkadyr-plugin": "^0.0.3",
     "eslint-plugin-i18next": "^6.0.0-4",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.3.0",

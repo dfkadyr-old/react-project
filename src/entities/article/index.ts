@@ -2,7 +2,6 @@ export { ArticleDetails } from './ui/article-details'
 export type { Article } from './model/types/article'
 export { ArticleView, ArticleSortField } from './model/consts'
 export type { ArticleDetailsSchema } from './model/types/article-details-schema'
-export { articleDetailsReducer } from './model/slice/article-details-slice'
 export { ArticleBlockType, ArticleType } from './model/types/article'
 export { getArticleDetailsData } from './model/selectors/article-details'
 

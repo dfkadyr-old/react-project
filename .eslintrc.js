@@ -88,8 +88,14 @@ module.exports = {
     'n/no-callback-literal': 'off',
     '@typescript-eslint/array-type': 'off',
     '@typescript-eslint/no-redeclare': 'off',
+    'import/no-unresolved': 'off',
     'dfkadyr-plugin/path-checker': ['error', { alias: '@' }],
-    'import/no-unresolved': 'off'
+    'dfkadyr-plugin/public-api-imports': ['error',
+      {
+        alias: '@',
+        testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/store-decorator.tsx']
+      }
+    ]
   },
   overrides: [
     {
