@@ -88,7 +88,7 @@ module.exports = {
     'n/no-callback-literal': 'off',
     '@typescript-eslint/array-type': 'off',
     '@typescript-eslint/no-redeclare': 'off',
-    'dfkadyr-plugin/path-checker': 'error',
+    'dfkadyr-plugin/path-checker': ['error', { alias: '@' }],
     'import/no-unresolved': 'off'
   },
   overrides: [
