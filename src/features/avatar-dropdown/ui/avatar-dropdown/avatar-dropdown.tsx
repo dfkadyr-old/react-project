@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { getUserAuthData, isUserAdmin, isUserManager, userActions } from '@/entities/user'
-import { RoutePath } from '@/shared/config/route-config'
+import { RoutePath } from '@/shared/const/router'
 import { classNames } from '@/shared/lib/class-names'
 import { Avatar } from '@/shared/ui/avatar'
 import { Dropdown } from '@/shared/ui/popups'

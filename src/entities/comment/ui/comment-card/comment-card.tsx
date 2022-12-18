@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-import { RoutePath } from '@/shared/config/route-config'
+import { RoutePath } from '@/shared/const/router'
 import { classNames } from '@/shared/lib/class-names'
 import { AppLink } from '@/shared/ui/app-link'
 import { Avatar } from '@/shared/ui/avatar'
