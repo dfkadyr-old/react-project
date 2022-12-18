@@ -1,9 +1,9 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 
-import { Theme } from '@/app/providers/theme-provider'
 import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg'
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg'
 import { ThemeDecorator } from '@/shared/config/storybook/theme-decorator'
+import { Theme } from '@/shared/const/theme'
 
 import { Icon } from './icon'
 

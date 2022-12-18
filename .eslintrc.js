@@ -90,6 +90,13 @@ module.exports = {
     '@typescript-eslint/no-redeclare': 'off',
     'import/no-unresolved': 'off',
     'dfkadyr-plugin/path-checker': ['error', { alias: '@' }],
+    'dfkadyr-plugin/layer-imports': [
+      'error',
+      {
+        alias: '@',
+        ignoreImportPatterns: ['**/store-provider', '**/testing']
+      }
+    ],
     'dfkadyr-plugin/public-api-imports': ['error',
       {
         alias: '@',
