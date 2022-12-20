@@ -32,7 +32,8 @@ module.exports = {
     'i18next',
     'import',
     'react-hooks',
-    'dfkadyr-plugin'
+    'dfkadyr-plugin',
+    'unused-imports'
   ],
   rules: {
     '@typescript-eslint/space-before-function-paren': 'off',
@@ -56,6 +57,7 @@ module.exports = {
     '@typescript-eslint/consistent-type-assertions': ['warn'],
     'react/display-name': 'off',
     'no-console': ['warn', { allow: ['info', 'error'] }],
+    'unused-imports/no-unused-imports': 'error',
     'import/order': [
       'error',
       {
