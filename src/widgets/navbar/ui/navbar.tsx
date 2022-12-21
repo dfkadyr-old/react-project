@@ -6,7 +6,7 @@ import { getUserAuthData } from '@/entities/user'
 import { LoginModal } from '@/features/auth-by-username'
 import { AvatarDropdown } from '@/features/avatar-dropdown'
 import { NotificationButton } from '@/features/notification-button'
-import { RoutePath } from '@/shared/const/router'
+import { getRouteArticleCreate } from '@/shared/const/router'
 import { classNames } from '@/shared/lib/class-names'
 import { AppLink, AppLinkTheme } from '@/shared/ui/app-link'
 import { Button, ButtonTheme } from '@/shared/ui/button'
@@ -37,7 +37,7 @@ export const Navbar = memo((props: NavbarProps): JSX.Element => {
     return (
       <header className={classNames(cls.navbar, {}, [className])}>
         <Text className={cls.appName} title={t('dfkadyr App')} theme={TextTheme.INVERTED} />
-        <AppLink to={RoutePath.article_create} theme={AppLinkTheme.SECONDARY}>
+        <AppLink to={getRouteArticleCreate()} theme={AppLinkTheme.SECONDARY}>
           {t('Create article')}
         </AppLink>
         <HStack gap={'16'} className={cls.actions}>
