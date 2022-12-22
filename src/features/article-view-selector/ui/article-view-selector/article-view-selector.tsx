@@ -1,12 +1,11 @@
 import { memo } from 'react'
 
+import { ArticleView } from '@/entities/article'
 import ListIcon from '@/shared/assets/icons/list-24-24.svg'
 import CardIcon from '@/shared/assets/icons/tiled-24-24.svg'
 import { classNames } from '@/shared/lib/class-names'
 import { Button, ButtonTheme } from '@/shared/ui/button'
 import { Icon } from '@/shared/ui/icon'
-
-import { ArticleView } from '../../model/consts'
 
 import cls from './article-view-selector.module.scss'
 

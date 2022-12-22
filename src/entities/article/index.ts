@@ -6,6 +6,3 @@ export { ArticleBlockType, ArticleType } from './model/types/article'
 export { getArticleDetailsData } from './model/selectors/article-details'
 
 export { ArticleList } from './ui/article-list'
-export { ArticleViewSelector } from './ui/article-view-selector'
-export { ArticleSortSelector } from './ui/article-sort-selector'
-export { ArticleTypeTabs } from './ui/article-type-tabs'
