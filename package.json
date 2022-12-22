@@ -23,7 +23,8 @@
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "storybook:build": "build-storybook -c ./config/storybook",
     "prepare": "husky install",
-    "generate:slice": "node ./scripts/create-slice/index.js"
+    "generate:slice": "node ./scripts/create-slice/index.js",
+    "postinstall": "node ./scripts/clear-cache.js"
   },
   "keywords": [],
   "author": "",
@@ -62,7 +63,6 @@
     "@typescript-eslint/eslint-plugin": "^5.38.0",
     "@typescript-eslint/parser": "^5.38.0",
     "babel-loader": "^8.2.3",
-    "babel-plugin-i18next-extract": "^0.8.3",
     "circular-dependency-plugin": "^5.2.2",
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.6.0",

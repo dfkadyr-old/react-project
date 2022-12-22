@@ -13,6 +13,7 @@ import { BuildOptions } from './types/config'
 
 export function buildPlugins(props: BuildOptions): webpack.WebpackPluginInstance[] {
   const { paths, isDev, project } = props
+  const isProd = !isDev
 
   const plugins = [
     new HTMLWebpackPlugin({
@@ -22,15 +23,6 @@ export function buildPlugins(props: BuildOptions): webpack.WebpackPluginInstance
     new webpack.DefinePlugin({
       __IS_DEV__: JSON.stringify(isDev),
       __PROJECT__: JSON.stringify(project)
-    }),
-    new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash:8].css',
-      chunkFilename: 'css/[name].[contenthash:8].css'
-    }),
-    new CopyPlugin({
-      patterns: [
-        { from: paths.locales, to: paths.buildLocales }
-      ]
     }),
     new CircularDependencyPlugin({
       exclude: /node_modules/,
@@ -52,6 +44,18 @@ export function buildPlugins(props: BuildOptions): webpack.WebpackPluginInstance
     plugins.push(new webpack.HotModuleReplacementPlugin())
     plugins.push(new BundleAnalyzerPlugin({
       openAnalyzer: false
+    }))
+  }
+
+  if (isProd) {
+    plugins.push(new MiniCssExtractPlugin({
+      filename: 'css/[name].[contenthash:8].css',
+      chunkFilename: 'css/[name].[contenthash:8].css'
+    }))
+    plugins.push(new CopyPlugin({
+      patterns: [
+        { from: paths.locales, to: paths.buildLocales }
+      ]
     }))
   }
 

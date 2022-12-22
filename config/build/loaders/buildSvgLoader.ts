@@ -4,6 +4,7 @@ export function buildSvgIconLoader(paths: BuildPaths) {
   return {
     test: /\.svg$/,
     include: `${paths.src}/shared/assets/icons`,
+    exclude: /node_modules/,
     use: [
       {
         loader: '@svgr/webpack',
