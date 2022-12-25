@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import 'isomorphic-fetch'
 
 import { AUTH_USER_LOCALSTORAGE_KEY } from '@/shared/const/localstorage'
 
