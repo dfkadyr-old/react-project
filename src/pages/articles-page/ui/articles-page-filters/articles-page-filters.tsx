@@ -11,7 +11,7 @@ import { ArticleViewSelector } from '@/features/article-view-selector'
 import { classNames } from '@/shared/lib/class-names'
 import { useAppDispatch } from '@/shared/lib/hooks/use-app-dispatch'
 import { useDebounce } from '@/shared/lib/hooks/use-debounce'
-import { SortOrder } from '@/shared/types'
+import { SortOrder } from '@/shared/types/sort'
 import { Card } from '@/shared/ui/card'
 import { Input } from '@/shared/ui/input'
 

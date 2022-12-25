@@ -9,7 +9,7 @@ export const MainPage = memo((): JSX.Element => {
   const { t } = useTranslation('main')
 
   return (
-    <Page>
+    <Page dataTestId='MainPage'>
       <Counter />
       <Text titleTag='h1' title={t('Main page')} />
     </Page>

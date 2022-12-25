@@ -7,7 +7,7 @@ export const AdminPanelPage = memo(() => {
   const { t } = useTranslation()
 
   return (
-    <Page>
+    <Page dataTestId='AdminPanelPage'>
       {t('AdminPanelPage page')}
     </Page>
   )

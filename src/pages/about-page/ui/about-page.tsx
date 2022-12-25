@@ -7,7 +7,7 @@ export const AboutPage = memo((): JSX.Element => {
   const { t } = useTranslation('about')
 
   return (
-    <Page>
+    <Page dataTestId='AboutPage'>
       {t('About page')}
     </Page>
   )

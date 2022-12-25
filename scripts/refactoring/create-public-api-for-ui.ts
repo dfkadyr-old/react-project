@@ -12,7 +12,7 @@ function isAbsolute(path: string) {
 }
 
 const files = project.getSourceFiles()
-const indexFilename = 'index.ts'
+const indexFilename = 'sort.ts'
 const layer = process.argv[2] || 'shared'
 const slice = 'ui'
 const dest = project.getDirectory(path.resolve(__dirname, '..', 'src', layer, slice))

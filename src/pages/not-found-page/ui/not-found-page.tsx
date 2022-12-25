@@ -10,7 +10,7 @@ export const NotFoundPage = memo((): JSX.Element => {
   const { t } = useTranslation()
 
   return (
-    <Page className={classNames(cls.NotFoundPage, {}, [])}>
+    <Page dataTestId='NotFoundPage' className={classNames(cls.NotFoundPage, {}, [])}>
       {t('Not found page')}
     </Page>
   )
