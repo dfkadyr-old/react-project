@@ -4,11 +4,13 @@ import { useTranslation } from 'react-i18next'
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg'
 import { getRouteArticleDetails } from '@/shared/const/router'
 import { classNames } from '@/shared/lib/class-names'
+import { AppImage } from '@/shared/ui/app-image'
 import { AppLink } from '@/shared/ui/app-link'
 import { Avatar } from '@/shared/ui/avatar'
 import { Button } from '@/shared/ui/button'
 import { Card } from '@/shared/ui/card'
 import { Icon } from '@/shared/ui/icon'
+import { Skeleton } from '@/shared/ui/skeleton'
 import { Text } from '@/shared/ui/text'
 
 import { ArticleView } from '../../model/consts'
@@ -48,7 +50,12 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
           </div>
           <Text title={article.title} className={cls.title} />
           {types}
-          <img src={article.img} className={cls.img} alt={article.title} />
+          <AppImage
+            fallback={<Skeleton width="100%" height={250} />}
+            src={article.img}
+            className={cls.img}
+            alt={article.title}
+          />
           {textBlock && <ArticleTextBlock block={textBlock} className={cls.textBlock} />}
           <div className={cls.footer}>
             <AppLink
@@ -74,7 +81,12 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     >
       <Card className={cls.card}>
         <div className={cls.imageWrapper}>
-          <img src={article.img} className={cls.img} alt={article.title}/>
+          <AppImage
+            fallback={<Skeleton width={200} height={200} />}
+            src={article.img}
+            className={cls.img}
+            alt={article.title}
+          />
           <Text text={article.createdAt} className={cls.date} />
         </div>
         <div className={cls.infoWrapper}>
