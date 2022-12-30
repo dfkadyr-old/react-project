@@ -15,8 +15,7 @@ module.exports = {
     'plugin:storybook/recommended'
   ],
   ignorePatterns: [
-    'cypress.config.ts',
-    './cypress/tsconfig.json'
+    'cypress.config.ts'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
