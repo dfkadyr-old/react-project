@@ -14,11 +14,15 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:storybook/recommended'
   ],
+  ignorePatterns: [
+    'cypress.config.ts',
+    './cypress/tsconfig.json'
+  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: ['./tsconfig.json']
+    project: ['./tsconfig.json', './cypress/tsconfig.json']
   },
   settings: {
     'import/resolver': {
