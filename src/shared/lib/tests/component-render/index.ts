@@ -1,1 +1,1 @@
-export { componentRender } from './component-render'
+export { componentRender, TestProvider } from './component-render'

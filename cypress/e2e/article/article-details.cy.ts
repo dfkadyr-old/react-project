@@ -28,4 +28,11 @@ describe('User visits article page', () => {
     cy.setRate(4, 'feedback')
     cy.get('[data-selected=true]').should('have.length', 4)
   })
+  it('And puts a rating (an example with a stub on fixtures)', () => {
+    cy.intercept('GET', '**/articles/*', { fixture: 'article-details.json' })
+    cy.getByTestId('ArticleDetails.Info')
+    cy.getByTestId('RatingCard').scrollIntoView()
+    cy.setRate(4, 'feedback')
+    cy.get('[data-selected=true]').should('have.length', 4)
+  })
 })
