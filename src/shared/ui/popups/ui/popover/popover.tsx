@@ -22,15 +22,11 @@ export const Popover = (props: PopoverProps) => {
 
   return (
     <HPopover className={classNames('', {}, [className, popupCls.popup])}>
-      <HPopover.Button as='div' role='button' className={popupCls.trigger}>
+      <HPopover.Button as="div" role="button" className={popupCls.trigger}>
         {trigger}
       </HPopover.Button>
 
-      <HPopover.Panel
-        className={classNames(cls.panel, {}, menuClasses)}
-      >
-        {children}
-      </HPopover.Panel>
+      <HPopover.Panel className={classNames(cls.panel, {}, menuClasses)}>{children}</HPopover.Panel>
     </HPopover>
   )
 }

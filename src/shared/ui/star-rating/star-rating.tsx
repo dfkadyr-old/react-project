@@ -21,11 +21,14 @@ export const StarRating = memo((props: StarRatingProps) => {
   const [currentStarsCount, setCurrentStarsCount] = useState(selectedStars)
   const [isSelected, setIsSelected] = useState(Boolean(selectedStars))
 
-  const onHover = useCallback((starsCount: number) => () => {
-    if (!isSelected) {
-      setCurrentStarsCount(starsCount)
-    }
-  }, [isSelected])
+  const onHover = useCallback(
+    (starsCount: number) => () => {
+      if (!isSelected) {
+        setCurrentStarsCount(starsCount)
+      }
+    },
+    [isSelected]
+  )
 
   const onLeave = useCallback(() => {
     if (!isSelected) {
@@ -33,13 +36,16 @@ export const StarRating = memo((props: StarRatingProps) => {
     }
   }, [isSelected])
 
-  const onClick = useCallback((starsCount: number) => () => {
-    if (!isSelected) {
-      onSelect?.(starsCount)
-      setCurrentStarsCount(starsCount)
-      setIsSelected(true)
-    }
-  }, [isSelected, onSelect])
+  const onClick = useCallback(
+    (starsCount: number) => () => {
+      if (!isSelected) {
+        onSelect?.(starsCount)
+        setCurrentStarsCount(starsCount)
+        setIsSelected(true)
+      }
+    },
+    [isSelected, onSelect]
+  )
 
   const mods: Mods = {
     [cls.selected]: isSelected
@@ -49,11 +55,7 @@ export const StarRating = memo((props: StarRatingProps) => {
     <div className={classNames('', {}, [className])}>
       {stars.map((starNumber) => (
         <Icon
-          className={classNames(
-            cls.starIcon,
-            mods,
-            [currentStarsCount >= starNumber ? cls.hovered : cls.normal]
-          )}
+          className={classNames(cls.starIcon, mods, [currentStarsCount >= starNumber ? cls.hovered : cls.normal])}
           Svg={StarIcon}
           key={starNumber}
           width={size}

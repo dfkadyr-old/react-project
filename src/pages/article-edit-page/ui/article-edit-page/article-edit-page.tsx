@@ -14,8 +14,6 @@ export const ArticleEditPage = memo((props: ArticleEditPageProps) => {
   const isEdit = Boolean(id)
 
   return (
-    <Page className={classNames('', {}, [className])}>
-      {isEdit ? `ArticleEditPage - ${id}` : 'ArticleCreatePage'}
-    </Page>
+    <Page className={classNames('', {}, [className])}>{isEdit ? `ArticleEditPage - ${id}` : 'ArticleCreatePage'}</Page>
   )
 })

@@ -53,7 +53,7 @@ export const Navbar = memo((props: NavbarProps): JSX.Element => {
       <Button theme={ButtonTheme.CLEAR_INVERTED} className={cls.links} onClick={onShowModal}>
         {t('Entry')}
       </Button>
-      {isAuthModal && <LoginModal isOpen={isAuthModal} onClose={onCloseModal} /> }
+      {isAuthModal && <LoginModal isOpen={isAuthModal} onClose={onCloseModal} />}
     </header>
   )
 })

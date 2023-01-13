@@ -21,7 +21,7 @@ export function RequireAuth(props: RequireAuthProps) {
       return true
     }
 
-    return roles.some(requireRole => {
+    return roles.some((requireRole) => {
       const hasRole = userRoles?.includes(requireRole)
       return hasRole
     })

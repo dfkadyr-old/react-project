@@ -16,8 +16,8 @@ export const ArticleImageBlock = memo((props: ArticleImageBlockProps) => {
   const { className, block } = props
   return (
     <div className={classNames(cls.articleImageBlock, {}, [className])}>
-      <img src={block.src} className={cls.img} alt={block.title}/>
-      {block.title && <Text text={block.title} align={TextAlign.CENTER}/>}
+      <img src={block.src} className={cls.img} alt={block.title} />
+      {block.title && <Text text={block.title} align={TextAlign.CENTER} />}
     </div>
   )
 })

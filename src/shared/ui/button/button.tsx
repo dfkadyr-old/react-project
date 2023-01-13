@@ -10,13 +10,13 @@ export const enum ButtonTheme {
   OUTLINE = 'outline',
   OUTLINE_RED = 'outlineRed',
   BACKGROUND = 'background',
-  BACKGROUND_INVERTED = 'backgroundInverted',
+  BACKGROUND_INVERTED = 'backgroundInverted'
 }
 
 export enum ButtonSize {
   M = 'size_m',
   L = 'size_l',
-  XL = 'size_xl',
+  XL = 'size_xl'
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -47,11 +47,7 @@ export const Button = (props: ButtonProps) => {
   }
 
   return (
-    <button
-      className={classNames(cls.button, mods, [className])}
-      disabled={disabled}
-      {...otherProps}
-    >
+    <button className={classNames(cls.button, mods, [className])} disabled={disabled} {...otherProps}>
       {children}
     </button>
   )

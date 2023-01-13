@@ -76,25 +76,24 @@ export const ArticleDetails = memo((props: ArticleDetailsProps) => {
       </>
     )
   } else if (error) {
-    content = (
-      <Text align={TextAlign.CENTER} title={t('Error to get article by id')} />
-    )
+    content = <Text align={TextAlign.CENTER} title={t('Error to get article by id')} />
   } else {
     content = (
       <>
-        {article?.img && <HStack justify={'center'} align={'center'} max className={cls.avatarWrapper}>
-          <Avatar size={200} src={article.img} className={cls.avatar} />
-        </HStack>
-        }
+        {article?.img && (
+          <HStack justify={'center'} align={'center'} max className={cls.avatarWrapper}>
+            <Avatar size={200} src={article.img} className={cls.avatar} />
+          </HStack>
+        )}
         <VStack gap={'4'} max data-testid="ArticleDetails.Info">
           <Text title={article?.title} text={article?.subtitle} className={cls.title} size={TextSize.L} />
           <HStack gap={'8'}>
             <Icon Svg={EyeIcon} className={cls.icon} />
-            <Text text={String(article?.views)}/>
+            <Text text={String(article?.views)} />
           </HStack>
           <HStack gap={'8'}>
             <Icon Svg={CalendarIcon} className={cls.icon} />
-            <Text text={article?.createdAt}/>
+            <Text text={article?.createdAt} />
           </HStack>
         </VStack>
         {article?.blocks.map(renderBlock)}

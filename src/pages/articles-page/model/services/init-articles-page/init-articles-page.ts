@@ -8,10 +8,7 @@ import { getArticlesPageInited } from '../../selectors/articles-page-selectors'
 import { articlesPageActions } from '../../slices/article-page-slice'
 import { fetchArticlesList } from '../fetch-articles-list'
 
-export const initArticlesPage = createAsyncThunk<
-void, URLSearchParams,
-ThunkConfig<string>
->(
+export const initArticlesPage = createAsyncThunk<void, URLSearchParams, ThunkConfig<string>>(
   'articlesPage/initArticlesPage',
   async (searchParams, thunkApi) => {
     const { getState, dispatch } = thunkApi

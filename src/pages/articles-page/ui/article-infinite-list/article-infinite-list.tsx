@@ -38,7 +38,5 @@ export const ArticleInfiniteList = memo((props: ArticleInfiniteListProps) => {
     return <Text text={t('Error loading articles')} />
   }
 
-  return (
-      <ArticleList isLoading={isLoading} view={view} articles={articles} className={className} />
-  )
+  return <ArticleList isLoading={isLoading} view={view} articles={articles} className={className} />
 })

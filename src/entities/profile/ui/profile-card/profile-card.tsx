@@ -73,68 +73,63 @@ export const ProfileCard = (props: ProfileCardProps) => {
   }
 
   return (
-    <VStack gap='16' max className={classNames(cls.profileCard, mods, [className])}>
-        {data?.avatar && (
-          <HStack justify={'center'} max align={'center'}>
-            <Avatar src={data?.avatar} alt="avatar"/>
-          </HStack>
-        )}
-        <Input
-          value={data?.first}
-          placeholder={t('Enter firstname')}
-          className={cls.input}
-          readonly={isReadonly}
-          onChange={onChangeFirstname}
-          data-testid={'ProfileCard.firstname'}
-        />
-        <Input
-          value={data?.lastname}
-          placeholder={t('Enter lastname')}
-          className={cls.input}
-          readonly={isReadonly}
-          onChange={onChangeLastname}
-          data-testid={'ProfileCard.lastname'}
-        />
-        <Input
-          value={data?.age}
-          placeholder={t('Enter age')}
-          className={cls.input}
-          readonly={isReadonly}
-          onChange={onChangeAge}
-        />
-        <Input
-          value={data?.city}
-          placeholder={t('Enter city')}
-          className={cls.input}
-          readonly={isReadonly}
-          onChange={onChangeCity}
-        />
-        <Input
-          value={data?.username}
-          placeholder={t('Enter username')}
-          className={cls.input}
-          readonly={isReadonly}
-          onChange={onChangeUsername}
-        />
-        <Input
-          value={data?.avatar}
-          placeholder={t('Enter avatar')}
-          className={cls.input}
-          readonly={isReadonly}
-          onChange={onChangeAvatar}
-        />
-        <CurrencySelect
-          className={cls.input}
-          value={data?.currency}
-          isReadonly={isReadonly}
-          onChange={onChangeCurrency}
-        />
-        <CountrySelect
-          className={cls.input}
-          value={data?.country}
-          isReadonly={isReadonly}
-          onChange={onChangeCountry}
-        />
+    <VStack gap="16" max className={classNames(cls.profileCard, mods, [className])}>
+      {data?.avatar && (
+        <HStack justify={'center'} max align={'center'}>
+          <Avatar src={data?.avatar} alt="avatar" />
+        </HStack>
+      )}
+      <Input
+        value={data?.first}
+        placeholder={t('Enter firstname')}
+        className={cls.input}
+        readonly={isReadonly}
+        onChange={onChangeFirstname}
+        data-testid={'ProfileCard.firstname'}
+      />
+      <Input
+        value={data?.lastname}
+        placeholder={t('Enter lastname')}
+        className={cls.input}
+        readonly={isReadonly}
+        onChange={onChangeLastname}
+        data-testid={'ProfileCard.lastname'}
+      />
+      <Input
+        value={data?.age}
+        placeholder={t('Enter age')}
+        className={cls.input}
+        readonly={isReadonly}
+        onChange={onChangeAge}
+      />
+      <Input
+        value={data?.city}
+        placeholder={t('Enter city')}
+        className={cls.input}
+        readonly={isReadonly}
+        onChange={onChangeCity}
+      />
+      <Input
+        value={data?.username}
+        placeholder={t('Enter username')}
+        className={cls.input}
+        readonly={isReadonly}
+        onChange={onChangeUsername}
+      />
+      <Input
+        value={data?.avatar}
+        placeholder={t('Enter avatar')}
+        className={cls.input}
+        readonly={isReadonly}
+        onChange={onChangeAvatar}
+      />
+      <CurrencySelect
+        className={cls.input}
+        value={data?.currency}
+        isReadonly={isReadonly}
+        onChange={onChangeCurrency}
+      />
+      <CountrySelect className={cls.input} value={data?.country} isReadonly={isReadonly} onChange={onChangeCountry} />
     </VStack>
   )
 }

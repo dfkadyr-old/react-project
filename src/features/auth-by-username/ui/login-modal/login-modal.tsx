@@ -13,11 +13,7 @@ interface LoginModalProps {
 export const LoginModal = (props: LoginModalProps) => {
   const { isOpen, onClose } = props
   return (
-    <Modal
-      isOpen={isOpen}
-      onClose={onClose}
-      lazy
-    >
+    <Modal isOpen={isOpen} onClose={onClose} lazy>
       <Suspense fallback={<Spinner />}>
         <LoginForm onSuccess={onClose} />
       </Suspense>

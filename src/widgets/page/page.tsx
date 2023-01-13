@@ -29,10 +29,12 @@ export const Page = memo((props: PageProps) => {
   const scrollPosition = useSelector((state: StateSchema) => getPageScrollByPath(state, pathname))
 
   const onScroll = useThrottle((e: UIEvent<HTMLDivElement>) => {
-    dispatch(pageActions.setScrollPosition({
-      path: pathname,
-      position: e.currentTarget.scrollTop
-    }))
+    dispatch(
+      pageActions.setScrollPosition({
+        path: pathname,
+        position: e.currentTarget.scrollTop
+      })
+    )
   }, 500)
 
   useInfiniteScroll({

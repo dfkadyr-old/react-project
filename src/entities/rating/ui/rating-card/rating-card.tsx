@@ -23,28 +23,23 @@ interface RatingCardProps {
 }
 
 export const RatingCard = memo((props: RatingCardProps) => {
-  const {
-    className,
-    onAccept,
-    feedbackTitle,
-    hasFeedback = false,
-    onCancel,
-    title,
-    rate = 0
-  } = props
+  const { className, onAccept, feedbackTitle, hasFeedback = false, onCancel, title, rate = 0 } = props
   const { t } = useTranslation()
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [starsCount, setStarsCount] = useState(rate)
   const [feedback, setFeedback] = useState('')
 
-  const onSelectStars = useCallback((selectedStarsCount: number) => {
-    setStarsCount(selectedStarsCount)
-    if (hasFeedback) {
-      setIsModalOpen(true)
-    } else {
-      onAccept?.(selectedStarsCount)
-    }
-  }, [hasFeedback, onAccept])
+  const onSelectStars = useCallback(
+    (selectedStarsCount: number) => {
+      setStarsCount(selectedStarsCount)
+      if (hasFeedback) {
+        setIsModalOpen(true)
+      } else {
+        onAccept?.(selectedStarsCount)
+      }
+    },
+    [hasFeedback, onAccept]
+  )
 
   const acceptHandle = useCallback(() => {
     setIsModalOpen(false)
@@ -58,22 +53,15 @@ export const RatingCard = memo((props: RatingCardProps) => {
 
   const modalContent = (
     <>
-      {feedbackTitle && <Text
-        title={feedbackTitle}
-      />}
-      <Input
-        data-testid="RatingCard.Input"
-        value={feedback}
-        onChange={setFeedback}
-        placeholder={t('Your feedback')}
-      />
+      {feedbackTitle && <Text title={feedbackTitle} />}
+      <Input data-testid="RatingCard.Input" value={feedback} onChange={setFeedback} placeholder={t('Your feedback')} />
     </>
   )
 
   return (
     <Card data-testid="RatingCard" className={classNames('', {}, [className])}>
       <VStack align="center" gap="8">
-        {title && <Text title={starsCount ? t('Thank you for rating!') : title} /> }
+        {title && <Text title={starsCount ? t('Thank you for rating!') : title} />}
         <StarRating selectedStars={starsCount} size={40} onSelect={onSelectStars} />
       </VStack>
       <BrowserView>

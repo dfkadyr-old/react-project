@@ -40,13 +40,13 @@ const options = {
 
 describe('features/EditableProfileCard', () => {
   test('Read-only mode should switch', async () => {
-    componentRender(<EditableProfileCard id='1' />, options)
+    componentRender(<EditableProfileCard id="1" />, options)
     await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditBtn'))
     expect(screen.getByTestId('EditableProfileCardHeader.CancelBtn')).toBeInTheDocument()
   })
 
   test('Values must be set to zero on cancellation', async () => {
-    componentRender(<EditableProfileCard id='1' />, options)
+    componentRender(<EditableProfileCard id="1" />, options)
     await userEvent.click(screen.getByTestId('EditableProfileCardHeader.EditBtn'))
 
     await userEvent.clear(screen.getByTestId('ProfileCard.firstname'))

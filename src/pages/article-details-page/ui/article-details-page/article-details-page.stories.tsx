@@ -94,24 +94,32 @@ const article: Article = {
 
 export const Primary = Template.bind({})
 Primary.args = {}
-Primary.decorators = [StoreDecorator({
-  articleDetails: {
-    data: article
-  }
-})]
+Primary.decorators = [
+  StoreDecorator({
+    articleDetails: {
+      data: article
+    }
+  })
+]
 
 export const PrimaryDark = Template.bind({})
 PrimaryDark.args = {}
-PrimaryDark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-  articleDetails: {
-    data: article
-  }
-})]
+PrimaryDark.decorators = [
+  ThemeDecorator(Theme.DARK),
+  StoreDecorator({
+    articleDetails: {
+      data: article
+    }
+  })
+]
 
 export const PrimaryOrange = Template.bind({})
 PrimaryOrange.args = {}
-PrimaryOrange.decorators = [ThemeDecorator(Theme.ORANGE), StoreDecorator({
-  articleDetails: {
-    data: article
-  }
-})]
+PrimaryOrange.decorators = [
+  ThemeDecorator(Theme.ORANGE),
+  StoreDecorator({
+    articleDetails: {
+      data: article
+    }
+  })
+]

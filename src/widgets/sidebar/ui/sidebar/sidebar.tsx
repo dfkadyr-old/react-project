@@ -21,16 +21,11 @@ export const Sidebar = memo((props: SidebarProps): JSX.Element => {
   const [collapsed, setCollapsed] = useState(false)
   const sidebarItemsList = useSelector(getSidebarItems)
 
-  const onToggle = () => setCollapsed(prev => !prev)
+  const onToggle = () => setCollapsed((prev) => !prev)
 
-  const listItems = useMemo(() =>
-    sidebarItemsList.map((item) =>
-      <SidebarItem
-        key={item.path}
-        item={item}
-        isCollapsed={collapsed}
-      />
-    ), [collapsed, sidebarItemsList]
+  const listItems = useMemo(
+    () => sidebarItemsList.map((item) => <SidebarItem key={item.path} item={item} isCollapsed={collapsed} />),
+    [collapsed, sidebarItemsList]
   )
 
   return (
@@ -42,7 +37,7 @@ export const Sidebar = memo((props: SidebarProps): JSX.Element => {
         theme={ButtonTheme.BACKGROUND_INVERTED}
         size={ButtonSize.L}
       >
-        {collapsed ? '>' : '<' }
+        {collapsed ? '>' : '<'}
       </Button>
       <VStack role="navigation" gap="8" className={cls.items}>
         {listItems}

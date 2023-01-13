@@ -25,14 +25,12 @@ interface DropdownProps {
 }
 
 export const Dropdown = memo((props: DropdownProps) => {
-  const {
-    className, trigger, items, direction = 'bottom right'
-  } = props
+  const { className, trigger, items, direction = 'bottom right' } = props
   const menuClasses = [mapDirectionClass[direction]]
 
   return (
     <Menu as="div" className={classNames(cls.dropdown, {}, [className, popupCls.popup])}>
-      <Menu.Button as='div' role='button' className={popupCls.trigger}>
+      <Menu.Button as="div" role="button" className={popupCls.trigger}>
         {trigger}
       </Menu.Button>
       <Menu.Items className={classNames(cls.menu, {}, menuClasses)}>
@@ -62,7 +60,6 @@ export const Dropdown = memo((props: DropdownProps) => {
             </Menu.Item>
           )
         })}
-
       </Menu.Items>
     </Menu>
   )

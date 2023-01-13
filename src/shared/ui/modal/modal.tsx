@@ -18,19 +18,9 @@ interface ModalProps {
 }
 
 export const Modal = (props: ModalProps) => {
-  const {
-    className,
-    children,
-    isOpen,
-    onClose,
-    lazy
-  } = props
+  const { className, children, isOpen, onClose, lazy } = props
 
-  const {
-    close,
-    isClosing,
-    isMounted
-  } = useModal({
+  const { close, isClosing, isMounted } = useModal({
     animationDelay: 300,
     onClose,
     isOpen
@@ -47,11 +37,7 @@ export const Modal = (props: ModalProps) => {
     <Portal>
       <VStack justify={'center'} align={'center'} className={classNames(cls.modal, mods, [className])}>
         <Overlay onClick={close} />
-        <div
-          className={cls.content}
-        >
-          {children}
-        </div>
+        <div className={cls.content}>{children}</div>
       </VStack>
     </Portal>
   )

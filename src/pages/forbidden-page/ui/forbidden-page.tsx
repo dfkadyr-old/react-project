@@ -6,9 +6,5 @@ import { Page } from '@/widgets/page'
 export const ForbiddenPage = memo(() => {
   const { t } = useTranslation()
 
-  return (
-    <Page dataTestId='ForbiddenPage'>
-      {t('ForbiddenPage page')}
-    </Page>
-  )
+  return <Page dataTestId="ForbiddenPage">{t('ForbiddenPage page')}</Page>
 })

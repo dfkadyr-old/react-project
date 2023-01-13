@@ -36,13 +36,19 @@ export const LoginForm = memo((props: LoginFormProps) => {
   const isLoading = useSelector(getLoginIsLoading)
   const error = useSelector(getLoginError)
 
-  const onChangeUsername = useCallback((value: string) => {
-    dispatch(loginActions.setUserName(value))
-  }, [dispatch])
+  const onChangeUsername = useCallback(
+    (value: string) => {
+      dispatch(loginActions.setUserName(value))
+    },
+    [dispatch]
+  )
 
-  const onChangePassword = useCallback((value: string) => {
-    dispatch(loginActions.setPassword(value))
-  }, [dispatch])
+  const onChangePassword = useCallback(
+    (value: string) => {
+      dispatch(loginActions.setPassword(value))
+    },
+    [dispatch]
+  )
 
   const onLoginClick = useCallback(async () => {
     const result = await dispatch(loginByUsername({ username, password }))
@@ -54,7 +60,7 @@ export const LoginForm = memo((props: LoginFormProps) => {
   return (
     <DynamicModuleLoader reducers={initialReducers}>
       <div className={classNames(cls.loginForm, {}, [className])}>
-        <Text title={t('Authorization Form') } />
+        <Text title={t('Authorization Form')} />
         {error && <Text text={t('Incorrect username or password')} theme={TextTheme.ERROR} />}
         <Input
           onChange={onChangeUsername}
@@ -63,18 +69,8 @@ export const LoginForm = memo((props: LoginFormProps) => {
           className={cls.input}
           value={username}
         />
-        <Input
-          onChange={onChangePassword}
-          placeholder={t('Enter password')}
-          className={cls.input}
-          value={password}
-        />
-        <Button
-          theme={ButtonTheme.OUTLINE}
-          className={cls.loginBtn}
-          onClick={onLoginClick}
-          disabled={isLoading}
-        >
+        <Input onChange={onChangePassword} placeholder={t('Enter password')} className={cls.input} value={password} />
+        <Button theme={ButtonTheme.OUTLINE} className={cls.loginBtn} onClick={onLoginClick} disabled={isLoading}>
           {t('Login')}
         </Button>
       </div>

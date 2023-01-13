@@ -32,26 +32,28 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
   }
 
   return (
-      <Dropdown
-        className={classNames('', {}, [className])}
-        direction={'bottom left'}
-        items={[
-          ...(isAdminPanelAvailable
-            ? [{
+    <Dropdown
+      className={classNames('', {}, [className])}
+      direction={'bottom left'}
+      items={[
+        ...(isAdminPanelAvailable
+          ? [
+              {
                 content: t('Admin'),
                 href: getRouteAdmin()
-              }]
-            : []),
-          {
-            content: t('Profile'),
-            href: getRouteProfile(authData.id)
-          },
-          {
-            content: t('Logout'),
-            onClick: onLogout
-          }
-        ]}
-        trigger={<Avatar size={30} src={authData.avatar} />}
-      />
+              }
+            ]
+          : []),
+        {
+          content: t('Profile'),
+          href: getRouteProfile(authData.id)
+        },
+        {
+          content: t('Logout'),
+          onClick: onLogout
+        }
+      ]}
+      trigger={<Avatar size={30} src={authData.avatar} />}
+    />
   )
 })

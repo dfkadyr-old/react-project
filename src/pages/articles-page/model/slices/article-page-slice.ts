@@ -53,7 +53,7 @@ const articlesPageSlice = createSlice({
     setType: (state, action: PayloadAction<ArticleType>) => {
       state.type = action.payload
     },
-    initState: state => {
+    initState: (state) => {
       const view = localStorage.getItem(ARTICLES_VIEW_LOCALSTORAGE_KEY) as ArticleView
       state.view = view
       state.limit = view === ArticleView.LIST ? 4 : 9
@@ -70,10 +70,7 @@ const articlesPageSlice = createSlice({
           articlesAdapter.removeAll(state)
         }
       })
-      .addCase(fetchArticlesList.fulfilled, (
-        state,
-        action
-      ) => {
+      .addCase(fetchArticlesList.fulfilled, (state, action) => {
         state.isLoading = false
         state.hasMore = action.payload.length >= state.limit
 
@@ -90,7 +87,4 @@ const articlesPageSlice = createSlice({
   }
 })
 
-export const {
-  reducer: articlesPageReducer,
-  actions: articlesPageActions
-} = articlesPageSlice
+export const { reducer: articlesPageReducer, actions: articlesPageActions } = articlesPageSlice

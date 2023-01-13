@@ -22,9 +22,7 @@ interface ArticleListProps {
 const getSkeletons = (view: ArticleView) => {
   return new Array(view === ArticleView.CARD ? 9 : 3)
     .fill(0)
-    .map((item, index) => (
-      <ArticleListItemSkeleton className={cls.card} key={index} view={view} />
-    ))
+    .map((item, index) => <ArticleListItemSkeleton className={cls.card} key={index} view={view} />)
 }
 
 export const ArticleList = memo((props: ArticleListProps) => {
@@ -32,7 +30,7 @@ export const ArticleList = memo((props: ArticleListProps) => {
   const { t } = useTranslation()
 
   const renderArticle = (article: Article) => {
-    return <ArticleListItem article={article} view={view} className={cls.card} key={article.id} target={target}/>
+    return <ArticleListItem article={article} target={target} view={view} className={cls.card} key={article.id} />
   }
 
   if (!isLoading && articles?.length === 0) {

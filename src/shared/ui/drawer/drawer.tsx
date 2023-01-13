@@ -20,12 +20,7 @@ interface DrawerProps {
 const height = window.innerHeight - 100
 
 const DrawerContent = (props: DrawerProps) => {
-  const {
-    className,
-    children,
-    onClose,
-    isOpen
-  } = props
+  const { className, children, onClose, isOpen } = props
   const { Spring, Gesture } = useAnimationLibs()
   const [{ y }, api] = Spring.useSpring(() => ({ y: height }))
 
@@ -43,13 +38,7 @@ const DrawerContent = (props: DrawerProps) => {
   }
 
   const bind = Gesture.useDrag(
-    ({
-      last,
-      velocity: [, vy],
-      direction: [, dy],
-      movement: [, my],
-      cancel
-    }) => {
+    ({ last, velocity: [, vy], direction: [, dy], movement: [, my], cancel }) => {
       if (my < -70) cancel()
 
       if (last) {
@@ -63,7 +52,10 @@ const DrawerContent = (props: DrawerProps) => {
       }
     },
     {
-      from: () => [0, y.get()], filterTaps: true, bounds: { top: 0 }, rubberband: true
+      from: () => [0, y.get()],
+      filterTaps: true,
+      bounds: { top: 0 },
+      rubberband: true
     }
   )
 

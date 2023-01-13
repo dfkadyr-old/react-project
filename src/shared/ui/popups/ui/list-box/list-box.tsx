@@ -42,24 +42,19 @@ export const ListBox = memo((props: ListBoxProps) => {
         value={value}
         onChange={onChange}
       >
-        <HListbox.Button as='div' role='button' className={cls.trigger}>
-          <Button disabled={readonly}>
-            {value ?? defaultValue}
-          </Button>
+        <HListbox.Button as="div" role="button" className={cls.trigger}>
+          <Button disabled={readonly}>{value ?? defaultValue}</Button>
         </HListbox.Button>
         <HListbox.Options className={classNames(cls.options, {}, optionsClasses)}>
           {options?.map((option) => (
-            <HListbox.Option
-              key={option.value}
-              value={option.value}
-              as={Fragment}
-              disabled={option.disabled}
-            >
+            <HListbox.Option key={option.value} value={option.value} as={Fragment} disabled={option.disabled}>
               {({ active, selected }) => (
                 <li
-                  className={classNames(cls.item,
+                  className={classNames(
+                    cls.item,
                     { [popupCls.active]: active, [popupCls.disabled]: option.disabled },
-                    [])}
+                    []
+                  )}
                 >
                   {selected && '!!!'}
                   {option.label}

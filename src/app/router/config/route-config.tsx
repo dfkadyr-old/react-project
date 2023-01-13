@@ -10,9 +10,13 @@ import { NotFoundPage } from '@/pages/not-found-page'
 import { ProfilePage } from '@/pages/profile-page'
 import {
   AppRoutes,
-  getRouteAbout, getRouteAdmin,
-  getRouteArticleCreate, getRouteArticleDetails, getRouteArticleEdit,
-  getRouteArticles, getRouteForbidden,
+  getRouteAbout,
+  getRouteAdmin,
+  getRouteArticleCreate,
+  getRouteArticleDetails,
+  getRouteArticleEdit,
+  getRouteArticles,
+  getRouteForbidden,
   getRouteMain,
   getRouteProfile
 } from '@/shared/const/router'

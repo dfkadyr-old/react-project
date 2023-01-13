@@ -54,11 +54,7 @@ export const Input = memo((props: InputProps) => {
 
   return (
     <div className={classNames(cls.inputWrapper, mods, [className])}>
-      {placeholder && (
-        <div className={cls.placeholder}>
-          {`${placeholder}>`}
-        </div>
-      )}
+      {placeholder && <div className={cls.placeholder}>{`${placeholder}>`}</div>}
       <div className={cls.caretWrapper}>
         <input
           ref={inputRef}

@@ -50,37 +50,61 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
     [ValidateProfileErrors.SERVER_ERROR]: t('Server Error')
   }
 
-  const onChangeFirstname = useCallback((value: string) => {
-    dispatch(profileActions.updateProfile({ first: value }))
-  }, [dispatch])
+  const onChangeFirstname = useCallback(
+    (value: string) => {
+      dispatch(profileActions.updateProfile({ first: value }))
+    },
+    [dispatch]
+  )
 
-  const onChangeLastname = useCallback((value: string) => {
-    dispatch(profileActions.updateProfile({ lastname: value }))
-  }, [dispatch])
+  const onChangeLastname = useCallback(
+    (value: string) => {
+      dispatch(profileActions.updateProfile({ lastname: value }))
+    },
+    [dispatch]
+  )
 
-  const onChangeAge = useCallback((value: string) => {
-    dispatch(profileActions.updateProfile({ age: Number(value || 0) }))
-  }, [dispatch])
+  const onChangeAge = useCallback(
+    (value: string) => {
+      dispatch(profileActions.updateProfile({ age: Number(value || 0) }))
+    },
+    [dispatch]
+  )
 
-  const onChangeCity = useCallback((value: string) => {
-    dispatch(profileActions.updateProfile({ city: value }))
-  }, [dispatch])
+  const onChangeCity = useCallback(
+    (value: string) => {
+      dispatch(profileActions.updateProfile({ city: value }))
+    },
+    [dispatch]
+  )
 
-  const onChangeUsername = useCallback((value: string) => {
-    dispatch(profileActions.updateProfile({ username: value }))
-  }, [dispatch])
+  const onChangeUsername = useCallback(
+    (value: string) => {
+      dispatch(profileActions.updateProfile({ username: value }))
+    },
+    [dispatch]
+  )
 
-  const onChangeAvatar = useCallback((value: string) => {
-    dispatch(profileActions.updateProfile({ avatar: value }))
-  }, [dispatch])
+  const onChangeAvatar = useCallback(
+    (value: string) => {
+      dispatch(profileActions.updateProfile({ avatar: value }))
+    },
+    [dispatch]
+  )
 
-  const onChangeCurrency = useCallback((currency: Currency) => {
-    dispatch(profileActions.updateProfile({ currency }))
-  }, [dispatch])
+  const onChangeCurrency = useCallback(
+    (currency: Currency) => {
+      dispatch(profileActions.updateProfile({ currency }))
+    },
+    [dispatch]
+  )
 
-  const onChangeCountry = useCallback((country: Country) => {
-    dispatch(profileActions.updateProfile({ country }))
-  }, [dispatch])
+  const onChangeCountry = useCallback(
+    (country: Country) => {
+      dispatch(profileActions.updateProfile({ country }))
+    },
+    [dispatch]
+  )
 
   useInitialEffect(() => {
     if (id) {
@@ -90,9 +114,10 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-        <VStack gap={'8'} max className={classNames('', {}, [className])}>
-          <EditableProfileCardHeader />
-          {validateErrors?.length && validateErrors.map(error => (
+      <VStack gap={'8'} max className={classNames('', {}, [className])}>
+        <EditableProfileCardHeader />
+        {validateErrors?.length &&
+          validateErrors.map((error) => (
             <Text
               dataTestId={'EditableProfileCard.Error'}
               key={error}
@@ -100,21 +125,21 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
               text={validateErrorTranslates[error]}
             />
           ))}
-          <ProfileCard
-            data={formData}
-            isLoading={isLoading}
-            error={error}
-            isReadonly={isReadonly}
-            onChangeFirstname={onChangeFirstname}
-            onChangeLastname={onChangeLastname}
-            onChangeAge={onChangeAge}
-            onChangeCity={onChangeCity}
-            onChangeUsername={onChangeUsername}
-            onChangeAvatar={onChangeAvatar}
-            onChangeCurrency={onChangeCurrency}
-            onChangeCountry={onChangeCountry}
-          />
-        </VStack>
+        <ProfileCard
+          data={formData}
+          isLoading={isLoading}
+          error={error}
+          isReadonly={isReadonly}
+          onChangeFirstname={onChangeFirstname}
+          onChangeLastname={onChangeLastname}
+          onChangeAge={onChangeAge}
+          onChangeCity={onChangeCity}
+          onChangeUsername={onChangeUsername}
+          onChangeAvatar={onChangeAvatar}
+          onChangeCurrency={onChangeCurrency}
+          onChangeCountry={onChangeCountry}
+        />
+      </VStack>
     </DynamicModuleLoader>
   )
 })

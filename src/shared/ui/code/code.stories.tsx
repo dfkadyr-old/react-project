@@ -17,11 +17,12 @@ const Template: ComponentStory<typeof Code> = (args) => <Code {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
-  text: 'export default {\n' +
-    '    title: \'shared/Code\',\n' +
+  text:
+    'export default {\n' +
+    "    title: 'shared/Code',\n" +
     '    component: Code,\n' +
     '    argTypes: {\n' +
-    '        backgroundColor: { control: \'color\' },\n' +
+    "        backgroundColor: { control: 'color' },\n" +
     '    },\n' +
     '} as ComponentMeta<typeof Code>;\n' +
     '\n' +
@@ -32,11 +33,12 @@ Primary.args = {
 
 export const PrimaryDark = Template.bind({})
 PrimaryDark.args = {
-  text: 'export default {\n' +
-    '    title: \'shared/Code\',\n' +
+  text:
+    'export default {\n' +
+    "    title: 'shared/Code',\n" +
     '    component: Code,\n' +
     '    argTypes: {\n' +
-    '        backgroundColor: { control: \'color\' },\n' +
+    "        backgroundColor: { control: 'color' },\n" +
     '    },\n' +
     '} as ComponentMeta<typeof Code>;\n' +
     '\n' +
@@ -48,11 +50,12 @@ PrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]
 
 export const PrimaryOrange = Template.bind({})
 PrimaryOrange.args = {
-  text: 'export default {\n' +
-    '    title: \'shared/Code\',\n' +
+  text:
+    'export default {\n' +
+    "    title: 'shared/Code',\n" +
     '    component: Code,\n' +
     '    argTypes: {\n' +
-    '        backgroundColor: { control: \'color\' },\n' +
+    "        backgroundColor: { control: 'color' },\n" +
     '    },\n' +
     '} as ComponentMeta<typeof Code>;\n' +
     '\n' +

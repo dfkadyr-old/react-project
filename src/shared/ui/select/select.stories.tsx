@@ -20,13 +20,16 @@ Primary.args = {
   label: 'Enter value',
   options: [
     {
-      value: '123', label: 'option 1'
+      value: '123',
+      label: 'option 1'
     },
     {
-      value: '345', label: 'option 2'
+      value: '345',
+      label: 'option 2'
     },
     {
-      value: '678', label: 'option 3'
+      value: '678',
+      label: 'option 3'
     }
   ]
 }
@@ -36,13 +39,16 @@ PrimaryDark.args = {
   label: 'Enter value',
   options: [
     {
-      value: '123', label: 'option 1'
+      value: '123',
+      label: 'option 1'
     },
     {
-      value: '345', label: 'option 2'
+      value: '345',
+      label: 'option 2'
     },
     {
-      value: '678', label: 'option 3'
+      value: '678',
+      label: 'option 3'
     }
   ]
 }

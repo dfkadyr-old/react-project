@@ -31,16 +31,21 @@ const Template: ComponentStory<typeof ProfilePage> = () => <ProfilePage />
 
 export const Normal = Template.bind({})
 Normal.args = {}
-Normal.decorators = [StoreDecorator({
-  profile: {
-    form: formData
-  }
-})]
+Normal.decorators = [
+  StoreDecorator({
+    profile: {
+      form: formData
+    }
+  })
+]
 
 export const Dark = Template.bind({})
 Dark.args = {}
-Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({
-  profile: {
-    form: formData
-  }
-})]
+Dark.decorators = [
+  ThemeDecorator(Theme.DARK),
+  StoreDecorator({
+    profile: {
+      form: formData
+    }
+  })
+]

@@ -23,9 +23,12 @@ export const CurrencySelect = memo((props: CurrencySelectProps) => {
   const { className, value, onChange, isReadonly } = props
   const { t } = useTranslation()
 
-  const onChangeHandler = useCallback((value: string) => {
-    onChange(value as Currency)
-  }, [onChange])
+  const onChangeHandler = useCallback(
+    (value: string) => {
+      onChange(value as Currency)
+    },
+    [onChange]
+  )
 
   return (
     <ListBox
@@ -34,6 +37,7 @@ export const CurrencySelect = memo((props: CurrencySelectProps) => {
       value={value}
       readonly={isReadonly}
       onChange={onChangeHandler}
-      className={classNames('', {}, [className])} />
+      className={classNames('', {}, [className])}
+    />
   )
 })

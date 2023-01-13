@@ -25,9 +25,12 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
   const { className, value, onChange, isReadonly } = props
   const { t } = useTranslation()
 
-  const onChangeHandler = useCallback((value: string) => {
-    onChange(value as Country)
-  }, [onChange])
+  const onChangeHandler = useCallback(
+    (value: string) => {
+      onChange(value as Country)
+    },
+    [onChange]
+  )
 
   return (
     <ListBox
@@ -36,6 +39,7 @@ export const CountrySelect = memo((props: CountrySelectProps) => {
       value={value}
       readonly={isReadonly}
       onChange={onChangeHandler}
-      className={classNames('', {}, [className])} />
+      className={classNames('', {}, [className])}
+    />
   )
 })

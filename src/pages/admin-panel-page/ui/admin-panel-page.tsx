@@ -6,9 +6,5 @@ import { Page } from '@/widgets/page'
 export const AdminPanelPage = memo(() => {
   const { t } = useTranslation()
 
-  return (
-    <Page dataTestId='AdminPanelPage'>
-      {t('AdminPanelPage page')}
-    </Page>
-  )
+  return <Page dataTestId="AdminPanelPage">{t('AdminPanelPage page')}</Page>
 })

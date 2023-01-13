@@ -34,14 +34,8 @@ export const ArticleDetailsPageHeader = memo((props: ArticleDetailsPageHeaderPro
 
   return (
     <HStack max justify={'spaceBetween'} className={classNames('', {}, [className])}>
-      <Button onClick={onBackToList}>
-        {t('Go to entities')}
-      </Button>
-      {isCanEdit && (
-        <Button onClick={onEditArticle}>
-          {t('Edit')}
-        </Button>)
-      }
+      <Button onClick={onBackToList}>{t('Go to entities')}</Button>
+      {isCanEdit && <Button onClick={onEditArticle}>{t('Edit')}</Button>}
     </HStack>
   )
 })

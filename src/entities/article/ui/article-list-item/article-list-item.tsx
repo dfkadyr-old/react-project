@@ -39,7 +39,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
   )
 
   if (view === ArticleView.LIST) {
-    const textBlock = article.blocks.find(block => block.type === ArticleBlockType.TEXT) as ArticleTextBlockTypes
+    const textBlock = article.blocks.find((block) => block.type === ArticleBlockType.TEXT) as ArticleTextBlockTypes
     return (
       <div data-testid="ArticleListItem" className={classNames(cls.articleListItem, {}, [className, cls[view]])}>
         <Card className={cls.card}>
@@ -58,13 +58,8 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
           />
           {textBlock && <ArticleTextBlock block={textBlock} className={cls.textBlock} />}
           <div className={cls.footer}>
-            <AppLink
-              target={target}
-              to={getRouteArticleDetails(article.id)}
-            >
-              <Button>
-                {t('Read more...')}
-              </Button>
+            <AppLink target={target} to={getRouteArticleDetails(article.id)}>
+              <Button>{t('Read more...')}</Button>
             </AppLink>
             {views}
           </div>

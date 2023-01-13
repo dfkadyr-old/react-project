@@ -9,10 +9,7 @@ import { Button } from '@/shared/ui/button'
 import { Input } from '@/shared/ui/input'
 import { HStack } from '@/shared/ui/stack'
 
-import {
-  getAddCommentFormIsLoading,
-  getAddCommentFormText
-} from '../../model/selectors/add-comment-form-selectors'
+import { getAddCommentFormIsLoading, getAddCommentFormText } from '../../model/selectors/add-comment-form-selectors'
 import { addCommentFormActions, addCommentFormReducer } from '../../model/slices/add-comment-form-slice'
 
 import cls from './add-comment-form.module.scss'
@@ -33,9 +30,12 @@ export const AddCommentForm = memo((props: AddCommentFormProps) => {
   const text = useSelector(getAddCommentFormText)
   const isLoading = useSelector(getAddCommentFormIsLoading)
 
-  const onCommentTextChange = useCallback((value: string) => {
-    dispatch(addCommentFormActions.setText(value))
-  }, [dispatch])
+  const onCommentTextChange = useCallback(
+    (value: string) => {
+      dispatch(addCommentFormActions.setText(value))
+    },
+    [dispatch]
+  )
 
   const onSendHandler = useCallback(() => {
     onSendComment(text || '')
@@ -48,7 +48,8 @@ export const AddCommentForm = memo((props: AddCommentFormProps) => {
         data-testid="AddCommentForm"
         justify={'spaceBetween'}
         align={'center'}
-        max gap={'8'}
+        max
+        gap={'8'}
         className={classNames(cls.addCommentForm, {}, [className])}
       >
         <Input
@@ -58,7 +59,9 @@ export const AddCommentForm = memo((props: AddCommentFormProps) => {
           placeholder={t('Enter comment text')}
           onChange={onCommentTextChange}
         />
-        <Button data-testid="AddCommentForm.Button" onClick={onSendHandler} disabled={isLoading}>{t('Add')}</Button>
+        <Button data-testid="AddCommentForm.Button" onClick={onSendHandler} disabled={isLoading}>
+          {t('Add')}
+        </Button>
       </HStack>
     </DynamicModuleLoader>
   )

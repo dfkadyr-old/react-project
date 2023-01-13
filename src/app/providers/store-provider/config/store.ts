@@ -8,10 +8,7 @@ import { pageReducer } from '@/widgets/page'
 import { createReducerManager } from './reducer-manager'
 import { StateSchema, ThunkExtraArg } from './state-schema'
 
-export function createReduxStore(
-  initialState?: StateSchema,
-  asyncReducers?: ReducersMapObject<StateSchema>
-) {
+export function createReduxStore(initialState?: StateSchema, asyncReducers?: ReducersMapObject<StateSchema>) {
   const rootReducers: ReducersMapObject<StateSchema> = {
     ...asyncReducers,
     counter: counterReducer,
@@ -30,11 +27,12 @@ export function createReduxStore(
     reducer: reducerManager.reduce as Reducer<CombinedState<StateSchema>>,
     devTools: __IS_DEV__,
     preloadedState: initialState,
-    middleware: getDefaultMiddleware => getDefaultMiddleware({
-      thunk: {
-        extraArgument: extraArg
-      }
-    }).concat(rtkApi.middleware)
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware({
+        thunk: {
+          extraArgument: extraArg
+        }
+      }).concat(rtkApi.middleware)
   })
 
   // @ts-expect-error
